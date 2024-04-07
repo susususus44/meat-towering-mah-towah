@@ -17,11 +17,18 @@ if (shake_mag > 0)
     if (shake_mag < 0)
         shake_mag = 0
 }
-hudy = lerp(hudy, (!instance_exists(obj_levelstart) ? 100 : -500), 0.4)
+if (collect != global.collect)
+{
+	collect = global.collect
+	collectscale = 2
+}
+collectscale = lerp(collectscale, 1, 0.1)
+hudy = lerp(hudy, (!instance_exists(obj_levelstart) ? 0 : -500), 0.4)
 global.collect = clamp(global.collect, 0, 10000000000)
 if (!obj_player.coop)
 {
 	var target = obj_player1
+	audio_listener_position(target.x, target.y, 0)
 	view_enabled = true;
 	view_visible[0] = true;
 	view_xport[0] = 0 + irandom_range(-shake_mag, shake_mag)
@@ -42,7 +49,6 @@ if (!obj_player.coop)
 	}
 	else if (!instance_exists(obj_fadeout))
 	{
-		camxsmooth = camx + 400
 		camera_set_view_pos(view_camera[0], camxsmooth, camysmooth)
 	}
 	if global.panic
@@ -84,3 +90,7 @@ else
 	camera_set_view_angle(view_camera[1], angle)
 	camera_set_view_size(view_camera[1], width, height)
 }
+if obj_player.isnoisy
+	hudspr = spr_hud2
+else
+	hudspr = spr_hud

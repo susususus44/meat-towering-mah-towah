@@ -1,12 +1,19 @@
 if (instance_exists(obj_pause) && !obj_pause.opened)
 	instance_destroy()
-menu = ["BLOOD EFFECT", "FULLSCREEN", "MASTER VOLUME", "MUSIC VOLUME", "SOUND VOLUME", "MCPIGS BROTHER", "CONTROLS"]
-menuselect = [(global.bloodenabled == 1 ? "ON" : "OFF"), (global.fullscreen == 1 ? "ON" : "OFF"), floor(global.vol * 100), floor(global.musicvol * 100), floor(global.audiovol * 100), (global.mcpigbrother == 1 ? "ON" : "OFF"), ""]
+menu = []
+array_push(menu, ["BLOOD EFFECT", "MCPIGS BROTHER"])
+array_push(menu, ["FULLSCREEN"])
+array_push(menu, ["MASTER VOLUME", "MUSIC VOLUME", "SFX VOLUME"])
+menuselect = []
+array_push(menuselect, [(global.bloodenabled == 1 ? "ON" : "OFF"), (global.mcpigbrother == 1 ? "ON" : "OFF")])
+array_push(menuselect, [(global.fullscreen == 1 ? "ON" : "OFF")])
+array_push(menuselect, [floor(global.vol * 100), floor(global.musicvol * 100), floor(global.audiovol * 100)])
 scr_soundeffect(sfx_menuwoosh)
+sections = ["GAME", "VIDEO OPTIONS", "AUDIO OPTIONS"]
+sectionselect = 0
 selected = 0
-menugui = 0
+menugui = 200
 menugui1 = 100
-backbuffer = 0
 opened = 1
 angle1 = 0
 angle2 = 0

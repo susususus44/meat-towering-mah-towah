@@ -5,29 +5,29 @@ function scr_player_normal(){
 	rage = 0
 	if (instance_exists(obj_runeffect))
 		obj_runeffect.image_xscale = xscale
-	if (sprite_index == spr_player_land && floor(image_index) == (image_number - 1))
-        sprite_index = spr_player_idle
-	if (sprite_index == spr_player_land2 && floor(image_index) == (image_number - 1))
-        sprite_index = spr_player_move
+	if (sprite_index == spr_land && floor(image_index) == (image_number - 1))
+        sprite_index = spr_idle
+	if (sprite_index == spr_land2 && floor(image_index) == (image_number - 1))
+        sprite_index = spr_move
 	if (sprite_index == spr_machslideend && floor(image_index) == (image_number - 1))
-        sprite_index = spr_player_idle
+        sprite_index = spr_idle
 	if (move != 0)
 	{
-		if (sprite_index != spr_player_run && !audio_is_playing(sfx_walk))
+		if (sprite_index != spr_run && !audio_is_playing(sfx_walk))
 			scr_soundeffect(sfx_walk)
-		if (sprite_index != spr_player_land2)
-			sprite_index = spr_player_move
+		if (sprite_index != spr_land2)
+			sprite_index = spr_move
 		xscale = move
 		image_speed = 0.35
 		movespeed = 4
 		if (!instance_exists(obj_walkeffect))
 			instance_create(x, y + 35, obj_walkeffect)
 	}
-	else if (sprite_index != spr_player_land && sprite_index != spr_machslideend)
+	else if (sprite_index != spr_land && sprite_index != spr_machslideend)
 	{
 		audio_stop_sound(sfx_walk)
-		if (sprite_index != spr_player_land)
-			sprite_index = spr_player_idle
+		if (sprite_index != spr_land)
+			sprite_index = spr_idle
 		image_speed = 0.35
 		movespeed = 0
 	}
@@ -35,7 +35,7 @@ function scr_player_normal(){
 	{
 		movespeed = 6
 		state = states.mach
-		sprite_index = spr_player_run
+		sprite_index = spr_run
 		image_index = 0
 		image_speed = 0.35
 	}
@@ -49,8 +49,9 @@ function scr_player_normal(){
 		movespeed = 4
 		momentum = 0
 		grav = 0.2
+		jumpstop = 0
 		image_index = 0
-		sprite_index = spr_player_jump // fun fact, this code still works
+		sprite_index = (key_run == 1 ? spr_runjump : spr_jump)
 	}
 	if (!grounded)
 	{
@@ -59,13 +60,13 @@ function scr_player_normal(){
 		state = states.jump
 		grav = 0.2
 		image_index = 0
-		sprite_index = spr_player_fall
+		sprite_index = (runjump == 1 ? spr_fall2 : spr_fall)
 	}
 	if (grounded && key_attack2 && !key_up)
 	{
 		audio_stop_sound(sfx_walk)
 		state = states.punch
-		sprite_index = spr_player_punchprep
+		sprite_index = spr_punchprep
 		image_speed = 0.35
 		image_index = 0
 		scr_soundeffect(sfx_punchcharge)
@@ -74,7 +75,7 @@ function scr_player_normal(){
 	{
 		audio_stop_sound(sfx_walk)
 		state = states.uppunch
-		sprite_index = spr_player_uppunchprep
+		sprite_index = spr_uppunchprep
 		image_speed = 0.35
 		image_index = 0
 		scr_soundeffect(sfx_punchcharge)
@@ -83,7 +84,7 @@ function scr_player_normal(){
 	{
 		audio_stop_sound(sfx_walk)
 		state = states.throwknife
-		sprite_index = spr_player_knifethrow
+		sprite_index = spr_throw1
 		image_speed = 0.35
 		image_index = 0
 		movespeed = 0
@@ -91,7 +92,7 @@ function scr_player_normal(){
 	if (key_down)
 	{
 		state = states.crouch
-		sprite_index = spr_player_crouchstart
+		sprite_index = spr_crouchstart
 		mask_index = spr_player_crouchmask
 		image_speed = 0.35
 		image_index = 0

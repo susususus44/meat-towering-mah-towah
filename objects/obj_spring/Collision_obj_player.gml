@@ -1,6 +1,6 @@
 with (other)
 {
-	if (state != states.mach && state != states.slam)
+	if (state != states.mach && state != states.slam && state != states.wallbounce && state != states.crusher)
 	{
 		vsp = -15
 		grav = 0.6
@@ -8,9 +8,9 @@ with (other)
 		hsp = 0
 		momentum = 0
 		movespeed = 5
-		sprite_index = spr_player_fall2
+		sprite_index = spr_fall2
 	}
-	else if (state == states.mach)
+	else if (state == states.mach || state == states.wallbounce && sprite_index == spr_playerN_wallbounce)
 	{
 		vsp = -9
 	}

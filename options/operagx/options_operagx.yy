@@ -5,7 +5,7 @@
   "option_operagx_display_cursor": true,
   "option_operagx_editUrl": "https://create.gx.games/game/ae555f4f-c727-4183-9715-542f9a219259/edit",
   "option_operagx_game_name": "Meat Tower",
-  "option_operagx_guid": "ae555f4f-c727-4183-9715-542f9a219259",
+  "option_operagx_guid": "",
   "option_operagx_internalShareUrl": "https://gx.games/games/p7vggu/meat-tower/tracks/fb27fedf-3b85-48ff-a61e-a68373e8d6a6/",
   "option_operagx_interpolate_pixels": true,
   "option_operagx_mod_editUrl": "",

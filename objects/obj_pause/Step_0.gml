@@ -1,5 +1,5 @@
 scr_getinput()
-if opened == 0 && key_start && !instance_exists(obj_option) && obj_player1.sprite_index != spr_player_entergate
+if opened == 0 && key_start && !instance_exists(obj_option) && !instance_exists(obj_levelstart) && obj_player1.sprite_index != spr_player_entergate
 {
 	if (instance_exists(obj_tip))
 		tip = obj_tip.tip
@@ -11,7 +11,14 @@ if opened == 0 && key_start && !instance_exists(obj_option) && obj_player1.sprit
 	audio_play_sound(mu_pause, 1, true)
 	opened = 1
 	instance_deactivate_all(true);
+	instance_activate_object(obj_audiomanager)
 	selected = 0
+	menu = ["RESUME", "OPTIONS"]
+	if (room != rm_hub && room != testroom)
+	{
+		array_push(menu, "RESTART")
+	}
+	array_push(menu, "EXIT")
 }
 bgy += 0.9
 bgx += 0.9
@@ -31,22 +38,23 @@ else
     fade = Approach(fade, 0, 0.1)
 if (key_jump2 && opened)
 {
-	switch (selected)
+	switch (menu[selected])
 	{
-		case 0:
+		case "RESUME":
 			if (sprite_exists(spr_custom))
 				sprite_delete(spr_custom)
 			audio_resume_all()
 			audio_stop_sound(mu_pause)
 			opened = 0
 			instance_activate_all()
-		case 1:
+		case "OPTIONS":
 			if !instance_exists(obj_option)
 				instance_create_depth(x, y, depth, obj_option)
 			break
-		case 2:
+		case "RESTART":
 			if (room != rm_hub && room != testroom)
 			{
+				instance_destroy(obj_levelstart)
 				ds_list_clear(global.saveroom)
 				ds_list_clear(global.baddieroom)
 				opened = 0
@@ -59,9 +67,10 @@ if (key_jump2 && opened)
 				obj_player1.movespeed = 0
 				room_goto(global.roomrestartto)
 				global.panic = 0
+				instance_create(x, y, obj_levelstart)
 			}
 			break
-		case 3:
+		case "EXIT":
 			if (room != rm_hub && room != testroom)
 			{
 				ds_list_clear(global.saveroom)
@@ -86,6 +95,7 @@ if (key_jump2 && opened)
 				ds_list_clear(global.saveroom)
 				opened = 0
 			}
+			instance_destroy(obj_levelstart)
 			break
 	}
 }

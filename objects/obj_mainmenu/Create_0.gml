@@ -12,3 +12,9 @@ inmenu = 1
 textfade = 0
 depth = -99
 image_speed = 0.35
+randommessage = ["[wave]SO SO SO PEAK!"]
+array_push(randommessage, "[wave]FEATURING THE NOISE")
+array_push(randommessage, "[wave]MCPIG APROOVED")
+array_push(randommessage, "[c_red][shake]ALSO TRY SOUPER THE GAME")
+array_push(randommessage, "[wheel]ALSO TRY SILLY COPPER")
+randommessageid = irandom_range(0, array_length(randommessage) - 1)

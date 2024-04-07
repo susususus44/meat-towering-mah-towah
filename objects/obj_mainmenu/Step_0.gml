@@ -22,7 +22,6 @@ if opened
     fade = Approach(fade, 1, 0.1)
 else
     fade = Approach(fade, 0, 0.1)
-audio_sound_gain(mu_menu, global.musicvol, 0)
 if (key_jump2 && scr_menunotexist() && inmenu)
 {
 switch (selected)

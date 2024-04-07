@@ -11,8 +11,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Important",
-    "path": "folders/Objects/Important.yy",
+    "name": "Objects",
+    "path": "folders/Objects.yy",
   },
   "parentObjectId": null,
   "persistent": true,
@@ -31,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_loading",
-    "path": "sprites/spr_loading/spr_loading.yy",
+    "name": "spr_meatbox",
+    "path": "sprites/spr_meatbox/spr_meatbox.yy",
   },
   "spriteMaskId": null,
   "visible": true,

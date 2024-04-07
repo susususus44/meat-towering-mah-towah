@@ -1,3 +1,8 @@
-if (floor(image_index) == (image_number - 1))
-	instance_destroy()
-drawy = lerp(drawy, 0, 0.2)
+if (timer <= 0)
+{
+	fadeout = 1
+	if (fade == 0)
+		instance_destroy()
+}
+timer--
+fade = Approach(fade, (fadeout ? 0 : 1), 0.1)

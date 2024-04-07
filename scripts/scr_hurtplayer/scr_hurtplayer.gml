@@ -10,7 +10,7 @@ function scr_hurtplayer(){
 		xscale *= -1
 		movespeed = (other.object_index != obj_rollingpig ? 8 : 16)
 		hsp = (other.object_index != obj_rollingpig ? 8 : 16)
-		sprite_index = spr_player_hurt
+		sprite_index = spr_hurt
 		image_index = 0
 		image_speed = 0.35
 		global.collect -= 10

@@ -1,3 +1,4 @@
+ds_queue_enqueue(global.follower_queue, [x, y]);
 if state != states.noclip
 	scr_collision()
 hitbuffer--
@@ -23,27 +24,6 @@ if (instance_exists(obj_levelstart))
 if (state != states.jump)
 	runjump = key_run
 scr_collide_destroyables()
-enum states {
-    normal,
-    jump,
-	bump,
-	punch,
-	slam,
-	hurt,
-	slide,
-	mach,
-	noclip,
-	cling,
-	crouch,
-	crouchjump,
-	machroll,
-	door,
-	comeoutdoor,
-	uppunch,
-	throwknife,
-	machslide,
-	dive,
-}
 switch (state)
 {
 	case states.normal:
@@ -100,9 +80,31 @@ switch (state)
 	case states.dive:
 		scr_player_dive()
 		break
+	case states.wallbounce: // past this message all the states are for the second dude
+		scr_playerN_bounce()
+		break
+	case states.crusher:
+		scr_playerN_crusher()
+		break
+		// ok now theres no second character states. YET
 }
 if (scr_press(vk_f5))
-	state = states.noclip //cheater
+	state = states.noclip //cheater // hell yeah i am one
+if scr_press(vk_f1)
+{
+	if !isnoisy
+	{
+		isnoisy = 1
+		audio_play_sound(boing, 1, false)
+	}
+	else if isnoisy
+	{
+		isnoisy = 0
+		audio_play_sound(sfx_door, 1, false)
+	}
+	playerspr()
+	
+}
 machafterimage--
 if (machafterimage <= 0)
 	machafterimage = 10
@@ -111,10 +113,14 @@ if (slamafterimage <= 0)
 	slamafterimage = 3
 if flash
    flash--;
-var overroomx = (x > room_width)
 var overroomy = (y > room_height)
-if ((overroomx || x < -10) || (overroomy || y < -10)) {
+if ((overroomy || y < -10)) {
 	x = obj_revive.x
 	y = obj_revive.y
 	scr_create_effect(spr_genericpoofeffect)
+}
+if state != states.mach && (audio_is_playing(sfx_machSKATE1) || audio_is_playing(sfx_machSKATE2))
+{
+	audio_stop_sound(sfx_machSKATE1)
+	audio_stop_sound(sfx_machSKATE2)
 }

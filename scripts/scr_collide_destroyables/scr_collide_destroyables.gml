@@ -1,8 +1,6 @@
 // Ресурсы скриптов были изменены для версии 2.3.0, подробности см. по адресу
 // https://help.yoyogames.com/hc/en-us/articles/360005277377
 function scr_collide_destroyables(){
-	if (movespeed >= 8)
-	{
 	if (place_meeting(x + (3 * xscale), y, obj_destroyable))
 	{
 		if (state == states.mach || state == states.machroll)
@@ -42,6 +40,5 @@ function scr_collide_destroyables(){
 			with (instance_place(x, y + 1, obj_destroyable))
 				instance_destroy()
 		}
-	}
 	}
 }

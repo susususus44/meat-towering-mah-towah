@@ -1,5 +1,3 @@
-/// @description Capture async events from NekoPresence.
-
 var ev_type = async_load[? "event_type"];
 
 if (ev_type == "DiscordReady")
@@ -17,4 +15,5 @@ if (ev_type == "DiscordReady")
 		show_error("no, gerome sam or whoever you are, YOU WILL NOT BE PLAYING THIS, GO FUCK YOURSELF YOU BITCH\n	-vadimos", 0)
 	sprite_add(np_get_avatar_url(async_load[? "user_id"], async_load[? "avatar"]), 1, false, false, 0, 0);
 	room_goto(intro)
+	window_set_cursor(cr_default);
 }

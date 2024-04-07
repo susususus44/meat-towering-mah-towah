@@ -1,3 +1,3 @@
 function scr_oink(){
-	scr_soundeffect(choose(sfx_oink1, sfx_oink2, sfx_oink3, sfx_oink4))
+	audio_play_sound_3d(choose(sfx_oink1, sfx_oink2, sfx_oink3, sfx_oink4), 1, false, x, y)
 }

@@ -1,5 +1,9 @@
-drawy = Approach(drawy, (timer >= 0 ? 0 : -545), 40)
-drawx = Approach(drawx, (timer >= 0 ? 0 : 960), 40)
 timer--
-if (timer < 0 && drawy <= -545)
-	instance_destroy()
+if (timer <= 180)
+{
+	drawy = lerp(drawy, (timer >= 0 ? 0 : -545), 0.1)
+	drawx = lerp(drawx, (timer >= 0 ? 0 : 960), 0.1)
+	fade = Approach(fade, (timer >= 0 ? 1 : 0), 0.1)
+	if (timer < 0 && drawy <= -540)
+		instance_destroy()
+}

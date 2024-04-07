@@ -6,6 +6,6 @@ function scr_player_comeoutdoor(){
 	vsp = 0
 	movespeed = 0
 	shadowalpha = Approach(shadowalpha, 0, 0.02)
-	if (sprite_index == spr_player_comeoutdoor && floor(image_index) == (image_number - 1))
+	if (sprite_index == spr_walkfront && floor(image_index) == (image_number - 1))
 		state = states.normal
 }

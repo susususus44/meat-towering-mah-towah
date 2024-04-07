@@ -1,27 +1,34 @@
 scr_getinput()
-menuselect = [(global.bloodenabled == 1 ? "ON" : "OFF"), (global.fullscreen == 1 ? "ON" : "OFF"), floor(global.vol * 100), floor(global.musicvol * 100), floor(global.audiovol * 100), (global.mcpigbrother == 1 ? "ON" : "OFF"), ""]
+menuselect = []
+array_push(menuselect, [(global.bloodenabled == 1 ? "ON" : "OFF"), (global.mcpigbrother == 1 ? "ON" : "OFF")])
+array_push(menuselect, [(global.fullscreen == 1 ? "ON" : "OFF")])
+array_push(menuselect, [floor(global.vol * 100), floor(global.musicvol * 100), floor(global.audiovol * 100)])
 bgy += 0.9
 bgx += 0.9
 angle1 += 1
-backbuffer--
 angle2 -= 1.1
-if !instance_exists(obj_keyconfig) {
 move = ((-key_up2) + key_down2)
 if (move != 0 && opened)
     scr_soundeffect(sfx_menubeep)
 selected += move
-selected = clamp(selected, 0, (array_length(menu) - 1))
+selected = clamp(selected, -1, (array_length(menu[sectionselect]) - 1))
+if (selected == -1)
+{
+	sectionselect += (key_left2 + key_right2)
+	sectionselect = clamp(sectionselect, 0, array_length(sections) - 1)
+}
 menugui = lerp(menugui, (opened == 1 ? 200 : -500), 0.1)
 var plus = (selected >= 2 ? (selected - 2) * 100 : 0)
 menugui1 = Approach(menugui1, 100 - plus, 7)
 if key_jump2
 	scr_soundeffect(sfx_punch1)
-if (key_attack2 && backbuffer <= 0)
+if (key_attack)
 {
 	instance_create_depth(x, y, depth - 1, obj_saveicon)
 	instance_destroy()
 }
-if (selected == 0 && key_jump2)
+if (selected != -1) {
+if (menu[sectionselect][selected] == "BLOOD EFFECT" && key_jump2)
 {
 	switch (global.bloodenabled)
 	{
@@ -36,7 +43,7 @@ if (selected == 0 && key_jump2)
 			break
 	}
 }
-if (selected == 1 && key_jump2)
+if (menu[sectionselect][selected] == "FULLSCREEN" && key_jump2)
 {
 	switch (global.fullscreen)
 	{
@@ -54,14 +61,14 @@ if (selected == 1 && key_jump2)
 			break
 	}
 }
-if (selected == 2)
+if (menu[sectionselect][selected] == "MASTER VOLUME")
 {
 	if (key_left || scr_holding(vk_left))
 		global.vol -= 0.01
 	if (key_right || scr_holding(vk_right))
 		global.vol += 0.01
 }
-if (selected == 3)
+if (menu[sectionselect][selected] == "MUSIC VOLUME")
 {
 	if (key_left || scr_holding(vk_left))
 		global.musicvol -= 0.01
@@ -69,14 +76,14 @@ if (selected == 3)
 		global.musicvol += 0.01
 	audio_sound_gain(mu_pause, global.musicvol, 0)
 }
-if (selected == 4)
+if (menu[sectionselect][selected] == "SFX VOLUME")
 {
 	if (key_left || scr_holding(vk_left))
 		global.audiovol -= 0.01
 	if (key_right || scr_holding(vk_right))
 		global.audiovol += 0.01
 }
-if (selected == 5 && key_jump2)
+if (menu[sectionselect][selected] == "MCPIGS BROTHER" && key_jump2)
 {
 	switch (global.mcpigbrother)
 	{
@@ -90,12 +97,7 @@ if (selected == 5 && key_jump2)
 			global.mcpigbrother = 1
 			break
 	}
-}
-if (selected == 6 && key_jump2 && !instance_exists(obj_keyconfig))
-{
-	instance_create(x, y, obj_keyconfig)
-}
-}
+}}
 audio_master_gain(global.vol);
 global.vol = clamp(global.vol, 0, 1)
 global.musicvol = clamp(global.musicvol, 0, 1)

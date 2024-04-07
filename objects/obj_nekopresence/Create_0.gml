@@ -1,5 +1,5 @@
 /// @description Initialize Discord.
-
+window_set_cursor(cr_hourglass);
 #macro DISCORD_APP_ID "1210171602080104508"
 ready = false;
 userid = 0

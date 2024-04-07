@@ -1,3 +1,4 @@
+audio_falloff_set_model(audio_falloff_linear_distance_clamped)
 global.grav = 0
 global.collect = 0
 angle = 0
@@ -13,6 +14,8 @@ shake_mag_acc = 0.1
 camxsmooth = 0
 hudy = 100
 camysmooth = 0
+collect = 0
+collectscale = 1
 smoothcam = 0 //warning: shitty, made it in 50 seconds
 ini_open("option")
 global.vol = ini_read_real("options", "volume", 0);

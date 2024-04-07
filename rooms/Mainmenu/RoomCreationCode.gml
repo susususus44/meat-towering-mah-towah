@@ -1,0 +1,1 @@
+global.bigfont = font_add_sprite_ext(spr_bigfont, "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890", 1, 0)

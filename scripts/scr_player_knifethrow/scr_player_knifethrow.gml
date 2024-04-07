@@ -3,7 +3,7 @@
 function scr_player_knifethrow(){
 	rage = 1
 	if (global.item == 1)
-		sprite_index = spr_player_bombthrow
+		sprite_index = spr_throw2
 	if (floor(image_index) == 8)
 	{
 		if (global.item == 0)

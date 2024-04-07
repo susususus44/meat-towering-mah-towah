@@ -1,5 +1,5 @@
 with (other) {
-	if (key_up2 && grounded && sprite_index != spr_player_lookdoor && sprite_index != spr_player_comeoutdoor) {
+	if (key_up2 && grounded && sprite_index != spr_lookdoor && sprite_index != spr_walkfront) {
 		global.roomrestartto = other.targetRoom
 		global.doorrestartto = other.targetDoor
 		global.resettox = x
@@ -13,7 +13,7 @@ with (other) {
 		vsp = 0
 		targetDoor = other.targetDoor
 		targetRoom = other.targetRoom
-		sprite_index = spr_player_entergate
+		sprite_index = spr_entergate
 		image_index = 0
 		state = states.door
 	}

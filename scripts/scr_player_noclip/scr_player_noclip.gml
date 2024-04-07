@@ -7,7 +7,7 @@ function scr_player_noclip(){
     x += ((key_left + key_right) * _spd)
     y += ((-((key_up - key_down))) * _spd)
     image_speed = 1
-    sprite_index = spr_player_idle
+    sprite_index = spr_idle
     if (key_jump || key_attack2)
     {
         image_speed = 0.35

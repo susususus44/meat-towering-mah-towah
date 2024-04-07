@@ -1,4 +1,4 @@
-ini_open("option")
+ini_open("options.ini")
 ini_write_real("options", "soundvolume", global.audiovol)
 ini_write_real("options", "blood", global.bloodenabled)
 ini_write_real("options", "fullscreen", global.fullscreen)
