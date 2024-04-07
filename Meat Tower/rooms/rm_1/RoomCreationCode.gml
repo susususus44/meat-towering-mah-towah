@@ -1,0 +1,1 @@
+global.roomname = "Le start"

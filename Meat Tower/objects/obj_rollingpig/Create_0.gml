@@ -1,0 +1,20 @@
+scr_collision_init()
+xscale = image_xscale
+rot = 0
+yscale = image_yscale
+alpha = 1
+attackcooldown = 0
+attackcooldown1 = 0
+movespeed = 3
+normalspr = 0
+angryspr = 0
+rubberbanding = 1
+spr_gibs = spr_meatgibs
+spr_turn = spr_rollingpig_turn
+state = enemystates.normal
+spr_normal = spr_rollingpig
+turncooldown = 0
+imabouttadie = 0
+image_speed = 0.35
+depth = -500
+grav = 0.3

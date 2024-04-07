@@ -1,0 +1,1 @@
+draw_sprite(sprite_index, -1, 928, 510 + drawy)

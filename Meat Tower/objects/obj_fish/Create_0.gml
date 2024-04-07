@@ -1,0 +1,19 @@
+scr_collision_init()
+xscale = image_xscale
+rot = 0
+yscale = image_yscale
+alpha = 1
+attackcooldown = 0
+attackcooldown1 = 0
+normalspr = 0
+angryspr = 0
+movespeed = 3
+turncooldown = 0
+rubberbanding = 0
+state = enemystates.normal
+spr_gibs = spr_fishgibs
+spr_turn = spr_fish_turn
+spr_normal = spr_fish_move
+image_speed = 0.35
+depth = -500
+grav = 0.3
