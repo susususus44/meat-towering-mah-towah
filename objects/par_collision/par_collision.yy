@@ -9,7 +9,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Parents",
-    "path": "folders/Objects/Unown Collisions/Parents.yy",
+    "path": "folders/Objects/Collisions/Parents.yy",
   },
   "parentObjectId": null,
   "persistent": false,
