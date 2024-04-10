@@ -24,6 +24,10 @@ if (collect != global.collect)
 }
 collectscale = lerp(collectscale, 1, 0.1)
 hudy = lerp(hudy, (!instance_exists(obj_levelstart) ? 0 : -500), 0.4)
+if (room == rm_hub)
+	visible = false
+else
+	visible = true
 global.collect = clamp(global.collect, 0, 10000000000)
 if (!obj_player.coop)
 {
