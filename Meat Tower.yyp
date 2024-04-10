@@ -596,7 +596,6 @@
     {"id":{"name":"__scribble_gen_2_parser","path":"scripts/__scribble_gen_2_parser/__scribble_gen_2_parser.yy",},},
     {"id":{"name":"obj_fixedeffect","path":"objects/obj_fixedeffect/obj_fixedeffect.yy",},},
     {"id":{"name":"scr_player_hurt","path":"scripts/scr_player_hurt/scr_player_hurt.yy",},},
-    {"id":{"name":"TileSet7","path":"tilesets/TileSet7/TileSet7.yy",},},
     {"id":{"name":"spritetest","path":"rooms/spritetest/spritetest.yy",},},
     {"id":{"name":"scribble_fallback_bulletpoint","path":"sprites/scribble_fallback_bulletpoint/scribble_fallback_bulletpoint.yy",},},
     {"id":{"name":"mu_city","path":"sounds/mu_city/mu_city.yy",},},

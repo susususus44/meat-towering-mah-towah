@@ -9,6 +9,8 @@ draw_sprite(spr_titlecard, 1, 0, drawy)
 draw_sprite(spr_titlecard, 0, drawx, 0)
 draw_sprite(spr_titlecard, 2, -drawx, 0)
 draw_sprite(spr_sausagecityicon, 0, drawx, 0)
+draw_set_halign(fa_center);
+draw_set_valign(fa_center);
 draw_set_font(global.titlecardfont)
 draw_text(930, drawy + 400, level)
 draw_set_alpha(1)

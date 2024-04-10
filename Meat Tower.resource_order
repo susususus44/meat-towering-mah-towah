@@ -527,7 +527,6 @@
     {"name":"__scribble_gen_2_parser","order":2,"path":"scripts/__scribble_gen_2_parser/__scribble_gen_2_parser.yy",},
     {"name":"obj_fixedeffect","order":11,"path":"objects/obj_fixedeffect/obj_fixedeffect.yy",},
     {"name":"scr_player_hurt","order":6,"path":"scripts/scr_player_hurt/scr_player_hurt.yy",},
-    {"name":"TileSet7","order":4,"path":"tilesets/TileSet7/TileSet7.yy",},
     {"name":"spritetest","order":5,"path":"rooms/spritetest/spritetest.yy",},
     {"name":"scribble_fallback_bulletpoint","order":12,"path":"sprites/scribble_fallback_bulletpoint/scribble_fallback_bulletpoint.yy",},
     {"name":"mu_city","order":29,"path":"sounds/mu_city/mu_city.yy",},
