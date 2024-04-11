@@ -110,6 +110,7 @@
     {"id":{"name":"spr_player_machroll","path":"sprites/spr_player_machroll/spr_player_machroll.yy",},},
     {"id":{"name":"obj_ham","path":"objects/obj_ham/obj_ham.yy",},},
     {"id":{"name":"scribble_color_get","path":"scripts/scribble_color_get/scribble_color_get.yy",},},
+    {"id":{"name":"spr_player_timesup","path":"sprites/spr_player_timesup/spr_player_timesup.yy",},},
     {"id":{"name":"obj_startgate","path":"objects/obj_startgate/obj_startgate.yy",},},
     {"id":{"name":"spr_rollingpig_mask","path":"sprites/spr_rollingpig_mask/spr_rollingpig_mask.yy",},},
     {"id":{"name":"spr_playerN_mach","path":"sprites/spr_playerN_mach/spr_playerN_mach.yy",},},

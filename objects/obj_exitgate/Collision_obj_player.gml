@@ -12,4 +12,18 @@ with (other) {
 		state = states.door
 		scr_ini_savefile_save(global.levelsaveto, "collect", global.collect)
 	}
+	if (other.image_index == 1 && state == states.comeoutdoor)
+	{
+		if (floor(image_index) == image_number - 2)
+		{
+			sprite_index = spr_timesup
+			image_index = 0
+			with (obj_camera)
+			{
+				shake_mag = 10
+                shake_mag_acc = (30 / room_speed)
+			}
+			other.image_index = 0
+		}
+	}
 }

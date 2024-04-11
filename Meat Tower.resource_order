@@ -81,6 +81,7 @@
     {"name":"obj_animatedparticle","order":3,"path":"objects/obj_animatedparticle/obj_animatedparticle.yy",},
     {"name":"spr_player_machroll","order":32,"path":"sprites/spr_player_machroll/spr_player_machroll.yy",},
     {"name":"obj_ham","order":28,"path":"objects/obj_ham/obj_ham.yy",},
+    {"name":"spr_player_timesup","order":44,"path":"sprites/spr_player_timesup/spr_player_timesup.yy",},
     {"name":"obj_startgate","order":34,"path":"objects/obj_startgate/obj_startgate.yy",},
     {"name":"spr_rollingpig_mask","order":2,"path":"sprites/spr_rollingpig_mask/spr_rollingpig_mask.yy",},
     {"name":"spr_playerN_mach","order":27,"path":"sprites/spr_playerN_mach/spr_playerN_mach.yy",},

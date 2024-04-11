@@ -35,6 +35,7 @@ function playerspr(){
 	spr_throw1 = spr_player_knifethrow
 	spr_throw2 = spr_player_bombthrow
 	spr_hurt = spr_player_hurt
+	spr_timesup = spr_player_timesup
 	if isnoisy //noise my favourite
 	{
 		spr_idle = spr_playerN_idle
@@ -72,5 +73,6 @@ function playerspr(){
 		spr_throw1 = spr_playerN_noisebombkick
 		spr_throw2 = spr_playerN_noisebombkick
 		spr_hurt = spr_playerN_hurtjump
+		spr_timesup = spr_player_timesup
 	}
 }
