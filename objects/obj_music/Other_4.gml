@@ -12,7 +12,7 @@ if (!global.panic)
 			global.mu = mu_city
 			break
 	}
-	if (!audio_is_playing(global.mu))
+	if (!audio_is_playing(global.mu) && room != rm_timesup)
 	{
 		audio_stop_sound(global.mu)
 		scr_music(global.mu)

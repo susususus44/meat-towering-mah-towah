@@ -15,6 +15,7 @@ function scr_player_slam(){
 		xscale = move
 	if (grounded && sprite_index != spr_slam1)
 	{
+		hsp = 0
 		with (obj_camera)
 		{
 			shake_mag = 2

@@ -21,7 +21,14 @@ enum states {
 	dive,
 	wallbounce,
 	crusher,
+	actor,
+	timesup,
 }
+global.doorrestartto = "A"
+global.roomrestartto = 0
+global.resettox = 0
+global.resettoy = 0
+global.resettoroom = 0
 global.visiblecollisions = 0
 global.fill = 0
 global.panic = 0

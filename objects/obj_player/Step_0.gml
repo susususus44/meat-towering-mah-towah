@@ -80,13 +80,18 @@ switch (state)
 	case states.dive:
 		scr_player_dive()
 		break
-	case states.wallbounce: // past this message all the states are for the second dude
+	case states.wallbounce:
 		scr_playerN_bounce()
 		break
 	case states.crusher:
 		scr_playerN_crusher()
 		break
-		// ok now theres no second character states. YET
+	case states.actor:
+		scr_player_actor()
+		break
+	case states.timesup:
+		scr_player_timesup()
+		break
 }
 if (scr_press(vk_f5))
 	state = states.noclip //cheater // hell yeah i am one
@@ -114,7 +119,7 @@ if (slamafterimage <= 0)
 if flash
    flash--;
 var overroomy = (y > room_height)
-if ((overroomy || y < -10)) {
+if ((overroomy || y < -10) && state != states.timesup) {
 	x = obj_revive.x
 	y = obj_revive.y
 	scr_create_effect(spr_genericpoofeffect)

@@ -2,7 +2,7 @@ if (instance_exists(obj_pause) && !obj_pause.opened)
 	instance_destroy()
 menu = []
 array_push(menu, ["BLOOD EFFECT", "MCPIGS BROTHER"])
-array_push(menu, ["FULLSCREEN"])
+array_push(menu, ["FULLSCREEN", "VSYNC"])
 array_push(menu, ["MASTER VOLUME", "MUSIC VOLUME", "SFX VOLUME"])
 menuselect = []
 array_push(menuselect, [(global.bloodenabled == 1 ? "ON" : "OFF"), (global.mcpigbrother == 1 ? "ON" : "OFF")])

@@ -24,7 +24,7 @@ if (collect != global.collect)
 }
 collectscale = lerp(collectscale, 1, 0.1)
 hudy = lerp(hudy, (!instance_exists(obj_levelstart) ? 0 : -500), 0.4)
-if (room == rm_hub)
+if (room == rm_hub || room = rm_timesup)
 	visible = false
 else
 	visible = true

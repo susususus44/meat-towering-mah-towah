@@ -1,7 +1,7 @@
 scr_getinput()
 menuselect = []
 array_push(menuselect, [(global.bloodenabled == 1 ? "ON" : "OFF"), (global.mcpigbrother == 1 ? "ON" : "OFF")])
-array_push(menuselect, [(global.fullscreen == 1 ? "ON" : "OFF")])
+array_push(menuselect, [(global.fullscreen == 1 ? "ON" : "OFF"), (global.vsync ? "ON" : "OFF")])
 array_push(menuselect, [floor(global.vol * 100), floor(global.musicvol * 100), floor(global.audiovol * 100)])
 bgy += 0.9
 bgx += 0.9
@@ -42,6 +42,22 @@ if (menu[sectionselect][selected] == "BLOOD EFFECT" && key_jump2)
 			global.bloodenabled = 1
 			break
 	}
+}
+if (menu[sectionselect][selected] == "VSYNC" && key_jump2)
+{
+	switch (global.vsync)
+	{
+		case 0:
+			global.vsync = 1
+			break
+		case 1:
+			global.vsync = 0
+			break
+		default:
+			global.vsync = 1
+			break
+	}
+	display_reset(0, global.vsync)
 }
 if (menu[sectionselect][selected] == "FULLSCREEN" && key_jump2)
 {

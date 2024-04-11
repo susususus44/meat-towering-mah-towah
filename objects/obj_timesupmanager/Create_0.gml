@@ -1,0 +1,11 @@
+str[0] = "G"
+str[1] = "A"
+str[2] = "M"
+str[3] = "E"
+str[4] = " "
+str[5] = "O"
+str[6] = "V"
+str[7] = "E"
+str[8] = "R"
+time = 25
+i = 0

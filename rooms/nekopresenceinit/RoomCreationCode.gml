@@ -6,6 +6,7 @@ global.fullscreen = ini_read_real("options", "fullscreen", 0);
 global.bloodenabled = ini_read_real("options", "blood", 1);
 global.item = ini_read_real("options", "item", 0)
 global.mcpigbrother = ini_read_real("options", "mcpigsbrother", 1)
+global.vsync = ini_read_real("options", "vsync", 1)
 window_set_fullscreen(global.fullscreen)
 audio_master_gain(global.vol);
 ini_close()
