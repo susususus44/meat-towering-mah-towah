@@ -1,3 +1,4 @@
+pal_swap_init_system(shd_pal_swapper,shd_pal_html_sprite,shd_pal_html_surface);
 enum states {
     normal,
     jump,
@@ -40,6 +41,7 @@ global.defaultfont = font_add_sprite_ext(spr_font, "abcdefghijklmnopqrstuvwxyz,.
 global.bigfont = font_add_sprite_ext(spr_bigfont, "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890#", 1, 0)
 global.titlecardfont = font_add_sprite_ext(spr_titlecardfont, "ABCDEFGHIJKLMNOPQRSTUVWXYZ", 1, 0)
 global.collectfont = font_add_sprite_ext(spr_collectfont, "1234567890", 0, -5)
+actortime = 0
 isnoisy = 0
 hallway = 0
 hallwaydir = 0

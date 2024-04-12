@@ -1,6 +1,7 @@
 index += 0.35
 with (obj_player)
 {	
+	pal_swap_set(spr_palette, 1, false)
 	if (state == states.comeoutdoor)
 		var doorshade = Approach(1, 0, 0.1)
 	else
@@ -26,6 +27,7 @@ with (obj_player)
 	if (state == states.comeoutdoor) {
 		draw_sprite_ext(sprite_index, image_index, x, y, xscale, yscale, rot, c_black, shadowalpha)
 	}
+	pal_swap_reset()
 }
 with (obj_enemy)
 {	

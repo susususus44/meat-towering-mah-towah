@@ -36,6 +36,7 @@ function playerspr(){
 	spr_throw2 = spr_player_bombthrow
 	spr_hurt = spr_player_hurt
 	spr_timesup = spr_player_timesup
+	spr_palette = spr_playerpal
 	if isnoisy //noise my favourite
 	{
 		spr_idle = spr_playerN_idle

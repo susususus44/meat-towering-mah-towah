@@ -16,8 +16,8 @@ for (var i = 0; i < array_length(menu[sectionselect]); i++)
 {
 	var col = (selected == i ? c_white : c_gray)
 	draw_set_halign(fa_left)
-    draw_text_colour(50, (menugui1 + (i * 80)) + 100, menu[sectionselect][i], col, col, col, col, 1)
+    draw_text_colour(50 + menugui, (menugui1 + (i * 80)) + 100, menu[sectionselect][i], col, col, col, col, 1)
 	draw_set_halign(fa_right)
-	draw_text_colour(910, (menugui1 + (i * 80)) + 100, menuselect[sectionselect][i], col, col, col, col, 1)
+	draw_text_colour(910 + menugui, (menugui1 + (i * 80)) + 100, menuselect[sectionselect][i], col, col, col, col, 1)
 }
 draw_set_alpha(1)

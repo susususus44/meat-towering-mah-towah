@@ -12,7 +12,7 @@ scr_soundeffect(sfx_menuwoosh)
 sections = ["GAME", "VIDEO OPTIONS", "AUDIO OPTIONS"]
 sectionselect = 0
 selected = 0
-menugui = 200
+menugui = 0
 menugui1 = 100
 opened = 1
 angle1 = 0

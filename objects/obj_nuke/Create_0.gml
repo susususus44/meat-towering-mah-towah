@@ -1,0 +1,1 @@
+y = obj_player.y - 3000

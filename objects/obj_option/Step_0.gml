@@ -8,16 +8,22 @@ bgx += 0.9
 angle1 += 1
 angle2 -= 1.1
 move = ((-key_up2) + key_down2)
+move1 = (key_left2 + key_right2)
 if (move != 0 && opened)
+{
     scr_soundeffect(sfx_menubeep)
-selected += move
-selected = clamp(selected, -1, (array_length(menu[sectionselect]) - 1))
+	selected += move
+	selected = clamp(selected, -1, (array_length(menu[sectionselect]) - 1))
+}
+menugui = lerp(menugui, 0, 0.2)
 if (selected == -1)
 {
-	sectionselect += (key_left2 + key_right2)
-	sectionselect = clamp(sectionselect, 0, array_length(sections) - 1)
+	if (move1 != 0) {
+		sectionselect += move1
+		sectionselect = clamp(sectionselect, 0, array_length(sections) - 1)
+		menugui = 200 * move1
+	}
 }
-menugui = lerp(menugui, (opened == 1 ? 200 : -500), 0.1)
 var plus = (selected >= 2 ? (selected - 2) * 100 : 0)
 menugui1 = Approach(menugui1, 100 - plus, 7)
 if key_jump2
