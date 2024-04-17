@@ -68,6 +68,7 @@ function scr_initinput(){
 		}
 	}
 	global.player_gamepad[0] = player_input_device[0]
+	scr_initinputglobals()
 }
 function scr_getinput(){
 	key_left = -(keyboard_check(global.key_leftC) || gamepad_button_check(global.player_gamepad[0], global.key_leftG))

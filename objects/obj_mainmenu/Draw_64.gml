@@ -24,3 +24,9 @@ draw_set_colour(c_white)
 draw_set_alpha(textfade)
 draw_text_scribble(480, 400, "[wave]PRESS JUMP")
 draw_set_alpha(1)
+if (instance_exists(obj_fadeout)) {
+	draw_set_alpha(obj_fadeout.fadealpha)
+	draw_set_color(c_black)
+	draw_rectangle(camera_get_view_x(view_camera[0]), camera_get_view_y(view_camera[0]), (camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0])), (camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0])), false)
+	draw_set_alpha(1)
+}

@@ -1,3 +1,4 @@
+event_inherited()
 image_speed = 0.35
 supercharged = 1
 	with (obj_camera)

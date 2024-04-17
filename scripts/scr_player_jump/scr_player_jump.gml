@@ -5,6 +5,7 @@ function scr_player_jump(){
         hsp = (xscale * movespeed)
 	move = (key_left + key_right)
 	grav = 0.23
+	
     if (sprite_index == spr_jump && floor(image_index) == (image_number - 1))
         sprite_index = spr_fall
 	if (sprite_index == spr_jump2 && floor(image_index) == (image_number - 1))
@@ -53,6 +54,15 @@ function scr_player_jump(){
 		sprite_index = spr_slam1
 		vsp = -3
 		image_index = 0
+	}
+	if (key_attack2)
+	{
+		audio_stop_sound(sfx_walk)
+		state = states.punch
+		sprite_index = spr_punchprep
+		image_speed = 0.35
+		image_index = 0
+		scr_soundeffect(sfx_punchcharge)
 	}
 	checkplayercrusher()
 }

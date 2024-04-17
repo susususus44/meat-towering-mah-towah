@@ -1,5 +1,5 @@
-menu = ["FILE 1", "FILE 2", "FILE 3", "NO SAVE"]
-promptsurface = surface_create(198, 253)
+menu = ["FILE 1", "FILE 2", "FILE 3"]
+promptsurface = surface_create(198, 198)
 audio_play_sound(mu_fileselect, 1, true)
 audio_play_sound(sfx_menuwoosh, 1, false)
 selected = 0

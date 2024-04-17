@@ -8,4 +8,5 @@ str[6] = "V"
 str[7] = "E"
 str[8] = "R"
 time = 25
+livesdrained = false
 i = 0

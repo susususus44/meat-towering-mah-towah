@@ -62,20 +62,11 @@ function scr_player_normal(){
 		image_index = 0
 		sprite_index = (runjump == 1 ? spr_fall2 : spr_fall)
 	}
-	if (grounded && key_attack2 && !key_up)
+	if (grounded && key_attack2)
 	{
 		audio_stop_sound(sfx_walk)
 		state = states.punch
 		sprite_index = spr_punchprep
-		image_speed = 0.35
-		image_index = 0
-		scr_soundeffect(sfx_punchcharge)
-	}
-	if (grounded && key_attack2 && key_up)
-	{
-		audio_stop_sound(sfx_walk)
-		state = states.uppunch
-		sprite_index = spr_uppunchprep
 		image_speed = 0.35
 		image_index = 0
 		scr_soundeffect(sfx_punchcharge)

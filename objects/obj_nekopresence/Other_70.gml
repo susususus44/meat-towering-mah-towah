@@ -16,4 +16,5 @@ if (ev_type == "DiscordReady")
 	sprite_add(np_get_avatar_url(async_load[? "user_id"], async_load[? "avatar"]), 1, false, false, 0, 0);
 	room_goto(intro)
 	window_set_cursor(cr_default);
+	drawgui = false
 }

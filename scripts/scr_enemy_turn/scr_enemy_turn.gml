@@ -1,5 +1,5 @@
 function scr_enemy_turn(){
-	hsp = (movespeed * xscale)
+	hsp = (movespeed * image_xscale)
 	sprite_index = spr_turn
 	movespeed = approach(movespeed, 0, 0.1)
 	if (floor(image_index) == (image_number - 1))
@@ -7,7 +7,7 @@ function scr_enemy_turn(){
 		movespeed = 2
 		turncooldown = 10
 		state = enemystates.normal
-		xscale *= -1
+		image_xscale *= -1
 		sprite_index = spr_normal
 		image_index = 0
 		image_speed = 0.35

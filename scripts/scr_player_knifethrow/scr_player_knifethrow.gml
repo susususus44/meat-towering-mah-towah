@@ -4,7 +4,7 @@ function scr_player_knifethrow(){
 	rage = 1
 	if (global.item == 1)
 		sprite_index = spr_throw2
-	if (floor(image_index) == 8)
+	if (floor(image_index) == 8 && !knifethrown)
 	{
 		if (global.item == 0)
 		{
@@ -24,8 +24,12 @@ function scr_player_knifethrow(){
 				hsp = 8
 			}
 		}
+		knifethrown = true
 	}
 	if (floor(image_index) == (image_number - 1))
+	{
 		state = states.normal
+		knifethrown = false
+	}
 	hsp = (movespeed * xscale)
 }

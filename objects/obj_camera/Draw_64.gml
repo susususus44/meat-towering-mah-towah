@@ -1,3 +1,8 @@
+var livesspr = spr_liveicon
+var livesprx = 0 + sprite_get_xoffset(livesspr)
+var livespry = 540 - sprite_get_yoffset(livesspr) - hudy
+draw_sprite(livesspr, 0, livesprx, livespry)
+draw_text(40, 500, lives)
 if (!visible)
 	return 0;
 draw_set_alpha(1)

@@ -1,5 +1,6 @@
 // this is the character sprites thingy for the player
 function playerspr(){
+	global.palspr = spr_playerpal
 	spr_idle = spr_player_idle
 	spr_move = spr_player_move
 	spr_jump = spr_player_jump
@@ -36,7 +37,7 @@ function playerspr(){
 	spr_throw2 = spr_player_bombthrow
 	spr_hurt = spr_player_hurt
 	spr_timesup = spr_player_timesup
-	spr_palette = spr_playerpal
+	spr_palette = global.palspr
 	if isnoisy //noise my favourite
 	{
 		spr_idle = spr_playerN_idle

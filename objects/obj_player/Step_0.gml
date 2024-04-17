@@ -95,6 +95,10 @@ switch (state)
 }
 if (scr_press(vk_f5))
 	state = states.noclip //cheater // hell yeah i am one
+if ((state == states.mach && movespeed > 8) || (state == states.slam && vsp > 0) || state = states.crusher || state == states.wallbounce)
+	instakill = true
+else
+	instakill = false
 if scr_press(vk_f1)
 {
 	if !isnoisy
@@ -110,12 +114,6 @@ if scr_press(vk_f1)
 	playerspr()
 	
 }
-machafterimage--
-if (machafterimage <= 0)
-	machafterimage = 10
-slamafterimage--
-if (slamafterimage <= 0)
-	slamafterimage = 3
 if flash
    flash--;
 var overroomy = (y > room_height)

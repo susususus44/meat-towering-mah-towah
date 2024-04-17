@@ -1,4 +1,5 @@
-function scr_hurtplayer(){
+function scr_hurtplayer(argument0){
+	with (argument0) {
 	if (state != states.hurt && hitbuffer < 0)
 	{
 		var randomchance = irandom_range(0, 5)
@@ -15,5 +16,14 @@ function scr_hurtplayer(){
 		image_speed = 0.35
 		global.collect -= 10
 		global.collect = clamp(global.collect, 0, 10000000000)
+		health--
+		if (health <= 0)
+		{
+			lives--
+			global.panic = false
+			audio_stop_all()
+			room_goto(rm_timesup)
+		}
+	}
 	}
 }

@@ -1,2 +1,2 @@
-image_xscale = other.xscale
+image_xscale = other.ID.xscale
 instance_destroy()

@@ -17,15 +17,21 @@ draw_set_halign(fa_center)
 draw_set_valign(fa_bottom)
 draw_set_alpha(1)
 if (!surface_exists(promptsurface))
-    promptsurface = surface_create(198, 298)
+    promptsurface = surface_create(198, 198)
 surface_set_target(promptsurface)
 draw_clear_alpha(c_black, 0)
 draw_sprite_tiled(bg_placeholder, -1, bgx, bgy)
 surface_reset_target()
 draw_surface(promptsurface, 380, menugui + 1)
-draw_sprite_ext(spr_fileselectbg, 0, 380, menugui, 1, 1.3, 0, c_white, 1)
+draw_sprite_ext(spr_fileselectbg, 0, 380, menugui, 1, 1, 0, c_white, 1)
 for (var i = 0; i < array_length(menu); i++)
 {
 	var col = (selected == i ? c_white : c_gray)
     draw_text_colour(495, (menugui + (i * (i != 3 ? 60 : 62)) + 70), menu[i], col, col, col, col, 1)
+}
+if (instance_exists(obj_fadeout)) {
+	draw_set_alpha(obj_fadeout.fadealpha)
+	draw_set_color(c_black)
+	draw_rectangle(camera_get_view_x(view_camera[0]), camera_get_view_y(view_camera[0]), (camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0])), (camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0])), false)
+	draw_set_alpha(1)
 }

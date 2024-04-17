@@ -11,13 +11,13 @@ function scr_player_hurt(){
 	if (hsp == 0)
 		movespeed = 0
 	hsp = (movespeed * xscale)
-	if (slamafterimage <= 1 && hsp != 0)
+	if (slamafterimage > 0)
+		slamafterimage--
+	else
 	{
+		slamafterimage = 6
 		with (instance_create_depth(x, y, depth + 1, obj_machafterimage)) {
-			sprite_index = other.sprite_index
-			image_index = other.image_index
-			image_xscale = other.xscale
-			image_yscale = other.yscale
+			ID = other.id
 		}
 	}
 }

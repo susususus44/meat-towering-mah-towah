@@ -61,14 +61,13 @@ function scr_player_slam(){
 	i knew i shouldve used godot, but i dont understand shit in it sadly
 	*/
 	// at least you did it lol
-	if (slamafterimage <= 1 && sprite_index == spr_slam2)
+	if (slamafterimage > 0)
+		slamafterimage--
+	else if (sprite_index == spr_slam2)
 	{
+		slamafterimage = 6
 		with (instance_create_depth(x, y, depth + 1, obj_machafterimage)) {
-			sprite_index = other.sprite_index
-			image_index = other.image_index
-			image_xscale = other.xscale
-			image_yscale = other.yscale
-			image_blend = c_white
+			ID = other.id
 		}
 	}
 }

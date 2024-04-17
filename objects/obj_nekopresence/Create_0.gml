@@ -4,6 +4,7 @@ window_set_cursor(cr_hourglass);
 ready = false;
 userid = 0
 index = 0
+drawgui = true
 global.roomname = "NekoPresence init"
 alarm[0] = room_speed * 5;
 image_speed = 0.35

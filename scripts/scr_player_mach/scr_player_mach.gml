@@ -19,19 +19,15 @@ function scr_player_mach(){
 		audio_stop_sound(sfx_machSKATE2)
 	if sprite_index == spr_playerN_mach && audio_is_playing(sfx_machSKATE1)
 		audio_stop_sound(sfx_machSKATE1)
-	if (machafterimage <= 1 && movespeed >= 8)
+	if (slamafterimage > 0)
+		slamafterimage--
+	else if (movespeed >= 8)
 	{
-		flash = 1
-		rage = 1
+		slamafterimage = 6
 		with (instance_create_depth(x, y, depth + 1, obj_machafterimage)) {
-			sprite_index = other.sprite_index
-			image_index = other.image_index
-			image_xscale = other.xscale
-			image_yscale = other.yscale
+			ID = other.id
 		}
 	}
-	else
-		rage = 0
 	if (key_down && grounded)
 	{
 		state = states.machroll

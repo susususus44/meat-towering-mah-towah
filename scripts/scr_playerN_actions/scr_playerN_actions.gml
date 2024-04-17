@@ -55,14 +55,14 @@ function scr_playerN_crusher() //gml_Script_scr_playerN_crusher
 
 function checkplayercrusher() //gml_Script_checkplayercrusher
 {
-    if (key_up && key_jump && (!grounded) && isnoisy)
+    if (key_up && key_jump2 && (!grounded) && isnoisy)
     {
         sprite_index = spr_playerN_noisecrusherstart
         image_speed = 0.35
         image_index = 0
         vsp = -15
         scr_soundeffect(whack)
-        state = (20 << 0)
+        state = states.crusher
     }
 }
 function scr_playerN_bounce() //da-da boing

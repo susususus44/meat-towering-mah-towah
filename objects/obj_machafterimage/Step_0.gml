@@ -1,4 +1,5 @@
-image_alpha = Approach(image_alpha, 0, 0.05)
+alpha = Approach(alpha, 0, 0.05)
 image_speed = 0
-if (image_alpha <= 0)
+if (alpha <= 0)
 	instance_destroy()
+image_alpha = (alpha * 4)
