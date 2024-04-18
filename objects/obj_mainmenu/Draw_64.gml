@@ -14,11 +14,21 @@ draw_set_halign(fa_right)
 for (var i = 0; i < array_length(menu); i++)
 {
 	var col = (selected == i ? c_white : c_gray)
-	var waveeff = (selected == i ? "" : "")
+	var waveeff = (i == 0 ? "" : "")
 	var str = string_concat(waveeff, menu[i])
 	draw_set_colour(col)
-	draw_sprite(spr_mainmenuselect, 0, menugui1 - 360, (270 + (i * 80)) - 10)
-	draw_text_scribble(menugui1, (370 + (i * 80)) - 40, str)
+	if (i != 0)
+	{
+		draw_set_halign(fa_right)
+		draw_sprite(spr_mainmenuselect, 0, menugui1 - 437, (270 + (i * 80)) - 80)
+		
+	}
+	else
+	{
+		draw_set_halign(fa_left)
+		draw_sprite(spr_mainmenuselectfile, fileselected, menugui1 - 437, (270 + (i * 80)) - 80)
+	}
+	draw_text_scribble(menugui1 - (i == 0 ? 270 : 0), (370 + (i * 80)) - 110, str)
 }
 draw_set_colour(c_white)
 draw_set_alpha(textfade)
