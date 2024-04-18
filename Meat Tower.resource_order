@@ -424,6 +424,7 @@
     {"name":"spr_playerN_idle","order":23,"path":"sprites/spr_playerN_idle/spr_playerN_idle.yy",},
     {"name":"scribble_kerning_pair_set","order":19,"path":"scripts/scribble_kerning_pair_set/scribble_kerning_pair_set.yy",},
     {"name":"spr_fish_angryprep","order":1,"path":"sprites/spr_fish_angryprep/spr_fish_angryprep.yy",},
+    {"name":"obj_enemycollisionbox","order":26,"path":"objects/obj_enemycollisionbox/obj_enemycollisionbox.yy",},
     {"name":"scr_getinput","order":1,"path":"scripts/scr_getinput/scr_getinput.yy",},
     {"name":"spr_door","order":14,"path":"sprites/spr_door/spr_door.yy",},
     {"name":"obj_bigdestroyabledeath","order":33,"path":"objects/obj_bigdestroyabledeath/obj_bigdestroyabledeath.yy",},

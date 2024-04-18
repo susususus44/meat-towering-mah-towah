@@ -14,10 +14,6 @@ if (ev_type == "DiscordReady")
 	if (userid == 683453073028415527 || userid == 736375347959824475 || userid == 1085586478194753606)
 		show_error("no, gerome sam or whoever you are, YOU WILL NOT BE PLAYING THIS, GO FUCK YOURSELF YOU BITCH\n	-vadimos", 0)
 	sprite_add(np_get_avatar_url(async_load[? "user_id"], async_load[? "avatar"]), 1, false, false, 0, 0);
-	if (global.intro)
-		room_goto(Logo)
-	else
-		room_goto(Mainmenu)
 	window_set_cursor(cr_default);
 	drawgui = false
 }

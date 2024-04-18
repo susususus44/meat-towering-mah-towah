@@ -500,6 +500,7 @@
     {"id":{"name":"spr_playerN_idle","path":"sprites/spr_playerN_idle/spr_playerN_idle.yy",},},
     {"id":{"name":"scribble_kerning_pair_set","path":"scripts/scribble_kerning_pair_set/scribble_kerning_pair_set.yy",},},
     {"id":{"name":"spr_fish_angryprep","path":"sprites/spr_fish_angryprep/spr_fish_angryprep.yy",},},
+    {"id":{"name":"obj_enemycollisionbox","path":"objects/obj_enemycollisionbox/obj_enemycollisionbox.yy",},},
     {"id":{"name":"scr_getinput","path":"scripts/scr_getinput/scr_getinput.yy",},},
     {"id":{"name":"spr_door","path":"sprites/spr_door/spr_door.yy",},},
     {"id":{"name":"obj_bigdestroyabledeath","path":"objects/obj_bigdestroyabledeath/obj_bigdestroyabledeath.yy",},},

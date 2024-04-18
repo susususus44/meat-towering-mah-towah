@@ -6,3 +6,4 @@ sprite_index = ID.sprite_index
 image_index = ID.image_index
 image_speed = 0
 alpha = 1
+depth = -125

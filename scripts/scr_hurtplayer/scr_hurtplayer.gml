@@ -16,14 +16,6 @@ function scr_hurtplayer(argument0){
 		image_speed = 0.35
 		global.collect -= 10
 		global.collect = clamp(global.collect, 0, 10000000000)
-		health--
-		if (health <= 0)
-		{
-			lives--
-			global.panic = false
-			audio_stop_all()
-			room_goto(rm_timesup)
-		}
 	}
 	}
 }

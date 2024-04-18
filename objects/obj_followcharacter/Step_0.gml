@@ -14,8 +14,8 @@ if (ds_queue_size(global.follower_queue) == 0 || (ds_queue_head(global.follower_
 
 if (ds_queue_size(global.follower_queue) > 0) {
     var target = ds_queue_head(global.follower_queue);
-    var move_x = (target[0] - x) * 0.1;
-    var move_y = (target[1] - y) * 0.1;
+    var move_x = (target[0] - x) * 0.15 - (count * 0.1);
+    var move_y = (target[1] - y) * 0.15;
 
     // Move the follower
     x += move_x;

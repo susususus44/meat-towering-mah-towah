@@ -1,8 +1,8 @@
 if (drawgui)
 {
+	draw_set_alpha(1)
+	
     draw_set_halign(fa_center)
     draw_set_valign(fa_top)
-    draw_rectangle_color(-1000, -1000, 1000, 1000, c_black, c_black, c_black, c_black, 0)
-    draw_text(480, 270, "This game has an auto save feature\nPlease do not restart or quit the game while this icon is on the screen\n\ninitilasing rpc")
-    draw_sprite(spr_loading, index, 480, 220)
+    draw_sprite(spr_loading, index, 0 + sprite_get_width(spr_loading) - sprite_get_xoffset(spr_loading), 540 - sprite_get_height(spr_loading) + sprite_get_yoffset(spr_loading))
 }

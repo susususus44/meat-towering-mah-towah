@@ -16,3 +16,7 @@ global.amountoftoppins = 0
 global.file = 0
 global.follower_queue = ds_queue_create();
 show_debug_overlay(true)
+if (global.intro)
+	room_goto(Logo)
+else
+	room_goto(Mainmenu)
