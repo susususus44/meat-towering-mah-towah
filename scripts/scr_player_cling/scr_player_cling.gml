@@ -10,7 +10,6 @@ function scr_player_cling(){
 	{
 		state = states.mach
 		vsp = -7
-		x += 2 * xscale
 		xscale *= -1
 		movespeed = 6
 		sprite_index = spr_player_run
