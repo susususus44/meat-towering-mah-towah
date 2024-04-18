@@ -1,5 +1,6 @@
 menu = ["FILE", "OPTIONS", "EXIT GAME"]
 scr_music(mu_menu)
+scr_initinput()
 selected = 0
 menugui = 0
 menugui1 = 1200

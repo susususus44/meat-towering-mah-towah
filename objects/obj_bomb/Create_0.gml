@@ -5,3 +5,4 @@ vspadd = 0.4
 supercharged = 1
 scr_collision_init()
 image_speed = 0.35
+depth = -127

@@ -1,11 +1,11 @@
 if (instance_exists(obj_pause) && !obj_pause.opened)
 	instance_destroy()
 menu = []
-array_push(menu, ["BLOOD EFFECT", "MCPIGS BROTHER"])
+array_push(menu, ["BLOOD EFFECT", "MCPIGS BROTHER", "STARTING INTRO"])
 array_push(menu, ["FULLSCREEN", "VSYNC"])
 array_push(menu, ["MASTER VOLUME", "MUSIC VOLUME", "SFX VOLUME"])
 menuselect = []
-array_push(menuselect, [(global.bloodenabled == 1 ? "ON" : "OFF"), (global.mcpigbrother == 1 ? "ON" : "OFF")])
+array_push(menuselect, [(global.bloodenabled == 1 ? "ON" : "OFF"), (global.mcpigbrother == 1 ? "ON" : "OFF"), (global.intro == 1 ? "ON" : "OFF")])
 array_push(menuselect, [(global.fullscreen == 1 ? "ON" : "OFF")])
 array_push(menuselect, [floor(global.vol * 100), floor(global.musicvol * 100), floor(global.audiovol * 100)])
 scr_soundeffect(sfx_menuwoosh)

@@ -1,3 +1,9 @@
-function instance_create(argument0, argument1, argument2){
-	return instance_create_depth(argument0, argument1, obj_player.depth - 1, argument2)
+/// @param x
+/// @param y
+/// @param object
+/// @param depth
+function instance_create(argument0, argument1, argument2, argument3 = {}) {
+	if (argument3 == undefined)
+		argument3 = -130
+	return instance_create_depth(argument0, argument1, argument3, argument2)
 }

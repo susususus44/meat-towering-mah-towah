@@ -1,6 +1,6 @@
 scr_getinput()
 menuselect = []
-array_push(menuselect, [(global.bloodenabled == 1 ? "ON" : "OFF"), (global.mcpigbrother == 1 ? "ON" : "OFF")])
+array_push(menuselect, [(global.bloodenabled == 1 ? "ON" : "OFF"), (global.mcpigbrother == 1 ? "ON" : "OFF"), (global.intro == 1 ? "ON" : "OFF")])
 array_push(menuselect, [(global.fullscreen == 1 ? "ON" : "OFF"), (global.vsync ? "ON" : "OFF")])
 array_push(menuselect, [floor(global.vol * 100), floor(global.musicvol * 100), floor(global.audiovol * 100)])
 bgy += 0.9
@@ -119,7 +119,23 @@ if (menu[sectionselect][selected] == "MCPIGS BROTHER" && key_jump2)
 			global.mcpigbrother = 1
 			break
 	}
-}}
+}
+if (menu[sectionselect][selected] == "STARTING INTRO" && key_jump2)
+{
+	switch (global.intro)
+	{
+		case 0:
+			global.intro = 1
+			break
+		case 1:
+			global.intro = 0
+			break
+		default:
+			global.intro = 1
+			break
+	}
+}
+}
 audio_master_gain(global.vol);
 global.vol = clamp(global.vol, 0, 1)
 global.musicvol = clamp(global.musicvol, 0, 1)
