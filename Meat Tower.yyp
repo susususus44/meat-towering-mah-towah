@@ -525,7 +525,6 @@
     {"id":{"name":"scr_hurtplayer","path":"scripts/scr_hurtplayer/scr_hurtplayer.yy",},},
     {"id":{"name":"spr_player_lookup","path":"sprites/spr_player_lookup/spr_player_lookup.yy",},},
     {"id":{"name":"spr_hallway","path":"sprites/spr_hallway/spr_hallway.yy",},},
-    {"id":{"name":"spr_loadingarrow","path":"sprites/spr_loadingarrow/spr_loadingarrow.yy",},},
     {"id":{"name":"spr_cloudeffect","path":"sprites/spr_cloudeffect/spr_cloudeffect.yy",},},
     {"id":{"name":"scr_player_comeoutdoor","path":"scripts/scr_player_comeoutdoor/scr_player_comeoutdoor.yy",},},
     {"id":{"name":"roomgoto","path":"objects/roomgoto/roomgoto.yy",},},
