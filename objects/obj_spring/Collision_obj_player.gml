@@ -2,10 +2,9 @@ with (other)
 {
 	if (state != states.mach && state != states.slam && state != states.wallbounce && state != states.crusher)
 	{
-		vsp = -15
+		vsp = -10
 		grav = 0.6
 		state = states.jump
-		hsp = 0
 		momentum = 0
 		movespeed = 5
 		sprite_index = spr_fall2

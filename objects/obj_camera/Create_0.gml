@@ -1,4 +1,3 @@
-audio_falloff_set_model(audio_falloff_linear_distance_clamped)
 global.grav = 0
 global.collect = 0
 angle = 0

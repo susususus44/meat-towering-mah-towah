@@ -10,5 +10,5 @@
 /// @param {any*} listener_mask 
 /// @returns {bool}
 function audio_play_sound_3d(argument0, argument1, argument2, argument3, argument4, argument5 = {}, argument6 = {}, argument7 = {}, argument8 = {} ){
-	audio_play_sound_at(argument0, argument3, argument4, 0, 300, 10, 10, argument2, argument1, argument5, argument6, argument7, argument8)
+	audio_play_sound_at(argument0, argument3, argument4, 0, obj_audiomanager.max_distance_to_be_heard, obj_audiomanager.start_dropping_off_at, obj_audiomanager.multiplier, argument2, argument1, argument5, argument6, argument7, argument8)
 }

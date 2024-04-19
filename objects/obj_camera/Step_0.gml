@@ -32,7 +32,6 @@ global.collect = clamp(global.collect, 0, 10000000000)
 if (!obj_player.coop)
 {
 	var target = obj_player1
-	audio_listener_position(target.x, target.y, 0)
 	view_enabled = true;
 	view_visible[0] = true;
 	view_xport[0] = 0 + irandom_range(-shake_mag, shake_mag)
