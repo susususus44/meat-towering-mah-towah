@@ -1,7 +1,4 @@
 if (other.state != states.hurt)
 {
-	with (other)
-	{
-		scr_hurtplayer()
-	}
+	scr_hurtplayer(other)
 }

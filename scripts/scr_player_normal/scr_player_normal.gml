@@ -88,7 +88,7 @@ function scr_player_normal(){
 		image_speed = 0.35
 		image_index = 0
 	}
-	if (place_meeting_solid(x, y-16)) {
+	if (place_meeting_solid(x - 1 * image_xscale, y-16)) {
 		state = states.crouch
 		sprite_index = spr_player_crouch
 	}

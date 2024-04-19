@@ -1,7 +1,7 @@
 function scr_enemy_turn(){
 	hsp = (movespeed * image_xscale)
 	sprite_index = spr_turn
-	movespeed = approach(movespeed, 0, 0.1)
+	movespeed = 0
 	if (floor(image_index) == (image_number - 1))
 	{
 		movespeed = 2
