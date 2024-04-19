@@ -1,6 +1,6 @@
 timer--
 key_tab = (keyboard_check_pressed(vk_tab) || gamepad_button_check_pressed(global.player_gamepad[0], gp_stickr))
-if key_tab
+if key_tab && obj_player.state != states.throwknife
 {
 	timer = 50
 	switch (global.item)

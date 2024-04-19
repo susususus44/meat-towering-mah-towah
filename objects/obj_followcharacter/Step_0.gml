@@ -22,7 +22,7 @@ if (ds_queue_size(global.follower_queue) > 0) {
     y += move_y;
 
     // Update the sprite based on movement
-    if (abs(move_x) > 0.9 || abs(move_y) > 0.9) { // Adjust this threshold to better detect movement
+    if (abs(move_x) > 0.9 || abs(move_y) > 0.8) { // Adjust this threshold to better detect movement
         sprite_index = spr_move;
     } else {
         sprite_index = spr_idle;

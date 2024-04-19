@@ -11,5 +11,7 @@ var signspr = spr_collectsign
 var signx = 960 - sprite_get_width(signspr) + sprite_get_xoffset(signspr)
 var signy = hudy + sprite_get_yoffset(signspr)
 draw_sprite(signspr, 0, signx, signy)
-draw_text_transformed(935, hudy + 55, collect, 1, 1, 0)
+if (erasing > 0)
+	draw_sprite(spr_collectsignerasing, 0, signx + irandom_range(-1, 1) + 4, signy + irandom_range(-1, 1) - 4)
+draw_text_transformed(935, hudy + 55, global.collect, 1, 1, 0)
 draw_set_alpha(1)

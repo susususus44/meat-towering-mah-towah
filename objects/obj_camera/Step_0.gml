@@ -17,18 +17,18 @@ if (shake_mag > 0)
     if (shake_mag < 0)
         shake_mag = 0
 }
-if (collect != global.collect)
-{
-	collect = global.collect
-	collectscale = 2
-}
-collectscale = lerp(collectscale, 1, 0.1)
 hudy = lerp(hudy, (!instance_exists(obj_levelstart) ? 0 : -500), 0.4)
 if (room == rm_hub || room = rm_timesup)
 	visible = false
 else
 	visible = true
 global.collect = clamp(global.collect, 0, 10000000000)
+if (collect != global.collect)
+{
+	erasing = 10
+	collect = global.collect
+}
+erasing--
 if (!obj_player.coop)
 {
 	var target = obj_player1

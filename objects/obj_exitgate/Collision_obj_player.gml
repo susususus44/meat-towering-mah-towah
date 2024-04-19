@@ -1,7 +1,7 @@
 with (other) {
 	if (global.panic && key_up2 && grounded && sprite_index != spr_lookdoor && sprite_index != spr_walkfront) {
 		global.panic = 0
-		scr_soundeffect(sfx_door, 1, false)
+		scr_soundeffect(sfx_door)
 		hsp = 0
 		movespeed = 0
 		vsp = 0

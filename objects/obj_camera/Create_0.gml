@@ -13,6 +13,7 @@ camxsmooth = 0
 hudy = 0
 camysmooth = 0
 collect = 0
+erasing = 0
 collectscale = 1
 smoothcam = 0 //warning: shitty, made it in 50 seconds
 ini_open("option")
