@@ -29,6 +29,13 @@ if (collect != global.collect)
 	collect = global.collect
 }
 erasing--
+zoom = clamp(zoom, 0.1, 2)
+if (mouse_wheel_up || mouse_wheel_down)
+{
+	zoom += mouse_wheel_up() * 0.1
+	zoom -= mouse_wheel_down() * 0.1
+	scr_draw_tip(zoom)
+}
 if (!obj_player.coop)
 {
 	var target = obj_player1
@@ -40,8 +47,8 @@ if (!obj_player.coop)
 	view_hport[0] = 540;
 	var wport = view_wport / 2
 	var hport = view_hport / 2
-	var camx = (target.x - wport) + offsetx
-	var camy = (target.y - hport) + offsety - 50
+	var camx = (target.x - wport) + offsetx + 480 * abs(zoom - 1)
+	var camy = (target.y - hport) + offsety - 50 + 270 * abs(zoom - 1)
 	camx = clamp(camx, 0, room_width - view_wport)
 	camy = clamp(camy, 0, room_height - view_hport)
 	camxsmooth = lerp(camxsmooth, camx, 0.02)
@@ -63,7 +70,7 @@ if (!obj_player.coop)
 	else
 		offsetx = Approach(offsetx, 0, 6)
 	camera_set_view_angle(view_camera[0], angle)
-	camera_set_view_size(view_camera[0], width * zoom, height * zoom)
+	camera_set_view_size(view_camera[0], zoom * 960, zoom * 540)
 }
 else
 {
