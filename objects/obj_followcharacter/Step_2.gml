@@ -1,5 +1,5 @@
 ds_queue_enqueue(followqueue, obj_player1.x)
-ds_queue_enqueue(followqueue, obj_player1.y)
+ds_queue_enqueue(followqueue, obj_player1.y - 2)
 ds_queue_enqueue(followqueue, obj_player1.hsp)
 if (abs((x - obj_player1.x)) > 30)
     image_xscale = sign((obj_player1.x - x))

@@ -1,27 +1,9 @@
-if (sprite_index != spr_blooddone)
+if (!done)
 	scr_collision()
 vsp += 0.3
-if (sprite_index != spr_blooddone)
-{
-	if (place_meeting(x + 2, y, obj_solid))
-	{
-		sprite_index = spr_blooddone
-	}
-	if (place_meeting(x - 2, y, obj_solid))
-	{
-		sprite_index = spr_blooddone
-	}
-	if (place_meeting(x, y - 2, obj_solid))
-	{
-		sprite_index = spr_blooddone
-	}
-	if (place_meeting(x, y + 1, obj_solid) || place_meeting(x, y + 20, obj_platform))
-	{
-		sprite_index = spr_blooddone
-	}
-}
+done = place_meeting(x - 1, y, par_collision) || place_meeting(x + 1, y, par_collision) || place_meeting(x, y - 1, par_collision) || place_meeting(x, y + 1,  par_collision)
 bloodcooldown++
-if (bloodcooldown >= 300)
+if (bloodcooldown >= 600)
 {
 	image_alpha = Approach(image_alpha, 0, 0.05)
 }

@@ -364,6 +364,7 @@
     {"id":{"name":"spr_fish_moveprep","path":"sprites/spr_fish_moveprep/spr_fish_moveprep.yy",},},
     {"id":{"name":"spr_playerN_crouchstart","path":"sprites/spr_playerN_crouchstart/spr_playerN_crouchstart.yy",},},
     {"id":{"name":"scr_enemy_meatbox","path":"scripts/scr_enemy_meatbox/scr_enemy_meatbox.yy",},},
+    {"id":{"name":"spr_cagenugget","path":"sprites/spr_cagenugget/spr_cagenugget.yy",},},
     {"id":{"name":"obj_option","path":"objects/obj_option/obj_option.yy",},},
     {"id":{"name":"tile_test","path":"sprites/tile_test/tile_test.yy",},},
     {"id":{"name":"__scribble_get_effects_slash_map","path":"scripts/__scribble_get_effects_slash_map/__scribble_get_effects_slash_map.yy",},},

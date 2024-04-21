@@ -314,6 +314,7 @@
     {"name":"spr_fish_moveprep","order":4,"path":"sprites/spr_fish_moveprep/spr_fish_moveprep.yy",},
     {"name":"spr_playerN_crouchstart","order":19,"path":"sprites/spr_playerN_crouchstart/spr_playerN_crouchstart.yy",},
     {"name":"scr_enemy_meatbox","order":2,"path":"scripts/scr_enemy_meatbox/scr_enemy_meatbox.yy",},
+    {"name":"spr_cagenugget","order":77,"path":"sprites/spr_cagenugget/spr_cagenugget.yy",},
     {"name":"obj_option","order":10,"path":"objects/obj_option/obj_option.yy",},
     {"name":"tile_test","order":3,"path":"sprites/tile_test/tile_test.yy",},
     {"name":"__scribble_get_effects_slash_map","order":6,"path":"scripts/__scribble_get_effects_slash_map/__scribble_get_effects_slash_map.yy",},
