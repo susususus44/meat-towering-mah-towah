@@ -1,3 +1,4 @@
+pal_swap_init_system(shd_pal_swapper,shd_pal_html_sprite,shd_pal_html_surface);
 spr_custom = sprite_create_from_surface(application_surface, 0, 0, 960, 540, true, false, 0, 0)
 menu = ["RESUME", "OPTIONS", "RESTART", "EXIT"]
 selected = 0
@@ -6,6 +7,12 @@ menugui1 = 2000
 menugui2 = -800
 tip = ""
 opened = 0
+playerx = 0
+playery = 0
+playersprite = 0
+playerindex = 0
+playerxscale = 1
+playeryscale = 1
 fade = 0
 bgy = 0
 bgx = 0

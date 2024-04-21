@@ -1,0 +1,1 @@
+lag_step = 12 * count

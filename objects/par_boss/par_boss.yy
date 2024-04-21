@@ -1,13 +1,13 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_platformend",
+  "name": "par_boss",
   "eventList": [],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Level",
-    "path": "folders/Objects/Level.yy",
+    "name": "Important",
+    "path": "folders/Objects/Important.yy",
   },
   "parentObjectId": null,
   "persistent": false,
@@ -25,10 +25,7 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": {
-    "name": "spr_unownPlatform",
-    "path": "sprites/spr_unownPlatform/spr_unownPlatform.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": true,
 }

@@ -1,7 +1,7 @@
 function scr_enemy_normal(){
 	hsp = (movespeed * image_xscale)
 	turncooldown--
-	var goingtoturn = !place_meeting(x + 60 * image_xscale, y + 1, par_collision) || place_meeting_solid((x + 2 * image_xscale), y)
+	var goingtoturn = ((!place_meeting(x + 60 * image_xscale, y + 2, par_collision) && !place_meeting_slope(x, y +1)) || place_meeting_solid((x + 1 * image_xscale), y - 3))
 	if (goingtoturn && turncooldown <= 0) {
 		state = enemystates.turn
 		image_index = 0

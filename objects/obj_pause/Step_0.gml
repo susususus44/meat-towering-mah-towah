@@ -1,6 +1,12 @@
 scr_getinput()
 if opened == 0 && key_start && !instance_exists(obj_option) && !instance_exists(obj_levelstart) && obj_player1.sprite_index != spr_player_entergate
 {
+	playerx = obj_player1.x - camera_get_view_x(view_camera[0]) 
+	playery = obj_player1.y - camera_get_view_y(view_camera[0]) 
+	playersprite = obj_player1.sprite_index
+	playerindex = obj_player1.image_index
+	playerxscale = obj_player1.xscale
+	playeryscale = obj_player1.yscale
 	if (instance_exists(obj_tip))
 		tip = obj_tip.tip
 	else
@@ -36,6 +42,11 @@ if opened
     fade = Approach(fade, 1, 0.1)
 else
     fade = Approach(fade, 0, 0.1)
+playerx = lerp(playerx, 100, 0.05)
+playery = lerp(playery, 400, 0.05)
+playerxscale = lerp(playerxscale, 3, 0.05)
+playeryscale = lerp(playeryscale, 3, 0.05)
+playerindex = lerp(playerindex, 0, 0.07)
 if (key_jump2 && opened)
 {
 	switch (menu[selected])

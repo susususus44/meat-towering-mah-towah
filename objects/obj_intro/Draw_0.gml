@@ -4,7 +4,8 @@ var data = video_get_status()
 var _status = _data[0];
 if (_status == 0)
 	draw_surface(_data[1], 0, 0)
-if (key_attack || data == video_status_paused) && !videoclosed
+backtimeout--
+if (key_attack2 || data == video_status_paused) && !videoclosed && backtimeout < 0
 {
 	videoclosed = 1
 	video_close()

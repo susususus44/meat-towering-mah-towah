@@ -12,10 +12,11 @@ window_set_fullscreen(global.fullscreen)
 audio_master_gain(global.vol);
 ini_close()
 scr_initinputglobals()
+global.debug = true
 global.amountoftoppins = 0
 global.file = 0
 global.follower_queue = ds_queue_create();
-show_debug_overlay(true)
+show_debug_overlay(global.debug)
 if (global.intro)
 	room_goto(Logo)
 else
