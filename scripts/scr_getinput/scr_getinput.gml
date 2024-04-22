@@ -1,39 +1,61 @@
-function scr_initinputglobals() {
-	ini_open("options.ini") 
+function scr_writeinputglobals() {
 	//keyboard
+	ini_open("options.ini") 
 	var keybinds = ["key_left", "key_right", "key_up", "key_down", "key_jump", "key_attack", "key_run", "key_knife"]
 	var keybindsdefault = [vk_left, vk_right, vk_up, vk_down, ord("Z"), ord("X"), vk_shift, ord("A")]
 	for (var i = 0; i < array_length(keybinds); ++i)
 	{
-		if (!ini_key_exists("controls", keybinds[i]))
-			ini_write_real("controls", keybinds[i], keybindsdefault[i])
+		ini_write_string("controls", keybinds[i], keybindsdefault[i])
 	}
 	//gamepad
 	var keybinds = ["key_left_gamepad", "key_right_gamepad", "key_up_gamepad", "key_down_gamepad", "key_jump_gamepad", "key_attack_gamepad", "key_run_gamepad", "key_knife_gamepad"]
 	var keybindsdefault = [gp_padl, gp_padr, gp_padu, gp_padd, gp_face1, gp_face3, gp_shoulderr, gp_face4]
 	for (var i = 0; i < array_length(keybinds); ++i)
 	{
-		if (!ini_key_exists("controls", keybinds[i]))
-			ini_write_real("controls", keybinds[i], keybindsdefault[i])
+		ini_write_string("controls", keybinds[i], keybindsdefault[i])
 	}
+	ini_close()
+}
+
+function scr_saveinput() {
 	//keyboard
-	global.key_leftC = ini_read_real("controls", "key_left", vk_left)
-	global.key_rightC = ini_read_real("controls", "key_right", vk_right)
-	global.key_upC = ini_read_real("controls", "key_up", vk_up)
-	global.key_downC = ini_read_real("controls", "key_down", vk_down)
-	global.key_jumpC = ini_read_real("controls", "key_jump", ord("Z"))
-	global.key_attackC = ini_read_real("controls", "key_attack", ord("X"))
-	global.key_runC = ini_read_real("controls", "key_run", vk_shift)
-	global.key_knifeC = ini_read_real("controls", "key_knife", ord("A"))
+	ini_open("options.ini") 
+	var keybinds = ["key_left", "key_right", "key_up", "key_down", "key_jump", "key_attack", "key_run", "key_knife"]
+	var keybindsdefault = [global.key_leftC, global.key_rightC, global.key_upC, global.key_downC, global.key_jumpC, global.key_attackC, global.key_runC, global.key_knifeC]
+	for (var i = 0; i < array_length(keybinds); ++i)
+	{
+		ini_write_string("controls", keybinds[i], keybindsdefault[i])
+	}
 	//gamepad
-	global.key_leftG = ini_read_real("controls", "key_left_gamepad", gp_padl)
-	global.key_rightG = ini_read_real("controls", "key_right_gamepad", gp_padr)
-	global.key_upG = ini_read_real("controls", "key_up_gamepad", gp_padu)
-	global.key_downG = ini_read_real("controls", "key_down_gamepad", gp_padd)
-	global.key_jumpG = ini_read_real("controls", "key_jump_gamepad", gp_face1)
-	global.key_attackG = ini_read_real("controls", "key_attack_gamepad", gp_face3)
-	global.key_runG = ini_read_real("controls", "key_run_gamepad", gp_shoulderr)
-	global.key_knifeG = ini_read_real("controls", "key_knife_gamepad", gp_face4)
+	var keybinds = ["key_left_gamepad", "key_right_gamepad", "key_up_gamepad", "key_down_gamepad", "key_jump_gamepad", "key_attack_gamepad", "key_run_gamepad", "key_knife_gamepad"]
+	var keybindsdefault = [global.key_leftG, global.key_rightG, global.key_upG, global.key_downG, global.key_jumpG, global.key_attaGkG, global.key_runG, global.key_knifeG]
+	for (var i = 0; i < array_length(keybinds); ++i)
+	{
+		ini_write_string("controls", keybinds[i], keybindsdefault[i])
+	}
+	ini_close()
+}
+
+function scr_initinputglobals() {
+	ini_open("options.ini") 
+	//keyboard
+	global.key_leftC = ini_read_string("controls", "key_left", vk_left)
+	global.key_rightC = ini_read_string("controls", "key_right", vk_right)
+	global.key_upC = ini_read_string("controls", "key_up", vk_up)
+	global.key_downC = ini_read_string("controls", "key_down", vk_down)
+	global.key_jumpC = ini_read_string("controls", "key_jump", ord("Z"))
+	global.key_attackC = ini_read_string("controls", "key_attack", ord("X"))
+	global.key_runC = ini_read_string("controls", "key_run", vk_shift)
+	global.key_knifeC = ini_read_string("controls", "key_knife", ord("A"))
+	//gamepad
+	global.key_leftG = ini_read_string("controls", "key_left_gamepad", gp_padl)
+	global.key_rightG = ini_read_string("controls", "key_right_gamepad", gp_padr)
+	global.key_upG = ini_read_string("controls", "key_up_gamepad", gp_padu)
+	global.key_downG = ini_read_string("controls", "key_down_gamepad", gp_padd)
+	global.key_jumpG = ini_read_string("controls", "key_jump_gamepad", gp_face1)
+	global.key_attackG = ini_read_string("controls", "key_attack_gamepad", gp_face3)
+	global.key_runG = ini_read_string("controls", "key_run_gamepad", gp_shoulderr)
+	global.key_knifeG = ini_read_string("controls", "key_knife_gamepad", gp_face4)
 	ini_close()
 }
 function scr_holding(argument0){

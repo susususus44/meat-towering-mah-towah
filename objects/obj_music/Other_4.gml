@@ -1,20 +1,13 @@
-if (!global.panic)
+if (room != testroom) {
+for (var i = 1; i < array_length(musicarray); ++i)
 {
-	switch(room)
-	{
-		case rm_1:
-			global.mu = mu_music
-			break
-		case rm_hub:
-			global.mu = mu_hub
-			break
-		case city_1:
-			global.mu = mu_city
-			break
-	}
-	if (!audio_is_playing(global.mu) && room != rm_timesup)
-	{
-		audio_stop_sound(global.mu)
-		scr_music(global.mu)
-	}
+	var prevmusic = array_get(musicarray[i - 1], 1)
+    var curroom = array_get(musicarray[i], 0)
+    var curmusic = array_get(musicarray[i], 1)
+    if (room != testroom && room == curroom && !audio_is_playing(curmusic))
+    {
+		audio_stop_sound(prevmusic)
+        audio_play_sound(curmusic, 1, true)
+    }
+}
 }

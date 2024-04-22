@@ -65,7 +65,6 @@ if (key_jump2 && opened)
 		case "RESTART":
 			if (room != rm_hub && room != testroom)
 			{
-				instance_destroy(obj_levelstart)
 				ds_list_clear(global.saveroom)
 				ds_list_clear(global.baddieroom)
 				opened = 0
@@ -78,7 +77,6 @@ if (key_jump2 && opened)
 				obj_player1.movespeed = 0
 				room_goto(global.roomrestartto)
 				global.panic = 0
-				instance_create(x, y, obj_levelstart)
 			}
 			break
 		case "EXIT":

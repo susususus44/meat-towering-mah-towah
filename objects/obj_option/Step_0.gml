@@ -1,14 +1,17 @@
 scr_getinput()
 menuselect = []
-array_push(menuselect, [(global.bloodenabled == 1 ? "ON" : "OFF"), (global.mcpigbrother == 1 ? "ON" : "OFF"), (global.intro == 1 ? "ON" : "OFF")])
-array_push(menuselect, [(global.fullscreen == 1 ? "ON" : "OFF"), (global.vsync ? "ON" : "OFF")])
+array_push(menuselect, [(global.bloodenabled == 1 ? "ON" : "OFF"), (global.mcpigbrother == 1 ? "ON" : "OFF"), (global.intro == 1 ? "ON" : "OFF"), (global.shadows == 1 ? "ON" : "OFF")])
+array_push(menuselect, [(global.fullscreen == 1 ? "FULLSCREEN" : (global.fullscreen == 2 ? "BORDERLESS WINDOW" : "WINDOWED")), (global.vsync ? "ON" : "OFF"), string_concat(global.windowscale, "X")])
 array_push(menuselect, [floor(global.vol * 100), floor(global.musicvol * 100), floor(global.audiovol * 100)])
+array_push(menuselect, ["PRESS JUMP"])
 bgy += 0.9
 bgx += 0.9
+index += 0.35
 angle1 += 1
 angle2 -= 1.1
 move = ((-key_up2) + key_down2)
 move1 = (key_left2 + key_right2)
+if (!instance_exists(obj_optionkeyselect)) {
 if (move != 0 && opened)
 {
     scr_soundeffect(sfx_menubeep)
@@ -28,10 +31,12 @@ var plus = (selected >= 2 ? (selected - 2) * 100 : 0)
 menugui1 = Approach(menugui1, 100 - plus, 7)
 if key_jump2
 	scr_soundeffect(sfx_punch1)
+	
 if (key_attack)
 {
 	instance_create_depth(x, y, depth - 1, obj_saveicon)
 	instance_destroy()
+}
 }
 if (selected != -1) {
 if (menu[sectionselect][selected] == "BLOOD EFFECT" && key_jump2)
@@ -65,23 +70,47 @@ if (menu[sectionselect][selected] == "VSYNC" && key_jump2)
 	}
 	display_reset(0, global.vsync)
 }
-if (menu[sectionselect][selected] == "FULLSCREEN" && key_jump2)
+if (menu[sectionselect][selected] == "WINDOW MODE" && key_jump2)
 {
 	switch (global.fullscreen)
 	{
 		case 0:
 			global.fullscreen = 1
-			window_set_fullscreen(global.fullscreen)
+			window_set_fullscreen(true)
+			window_set_size(960, 540)
+			window_set_showborder(true)
 			break
 		case 1:
+			global.fullscreen = 2
+			window_set_fullscreen(false)
+			window_set_size(960 * 2, 540 * 2)
+			window_set_position(0, 0)
+			window_set_showborder(false)
+			break
+		case 2:
 			global.fullscreen = 0
-			window_set_fullscreen(global.fullscreen)
+			window_set_fullscreen(false)
+			window_set_size(960, 540)
+			window_set_position(1920 / 2, 1080 / 2)
+			window_set_showborder(true)
 			break
 		default:
-			global.fullscreen = 1
-			window_set_fullscreen(global.fullscreen)
+			global.fullscreen = 2
+			window_set_fullscreen(false)
+			window_set_size(960 * 2, 540 * 2)
+			window_set_position(0, 0)
+			window_set_showborder(false)
 			break
 	}
+}
+if (menu[sectionselect][selected] == "WINDOW SCALE")
+{
+	if (key_left2 || scr_press(vk_left))
+		global.windowscale -= 1
+	if (key_right2 || scr_press(vk_right))
+		global.windowscale += 1
+	global.windowscale = clamp(global.windowscale, 1, 4)
+	window_set_size(960 * global.windowscale, 540 * global.windowscale)
 }
 if (menu[sectionselect][selected] == "MASTER VOLUME")
 {
@@ -135,8 +164,28 @@ if (menu[sectionselect][selected] == "STARTING INTRO" && key_jump2)
 			break
 	}
 }
+if (menu[sectionselect][selected] == "CHANGE CONTROLS" && key_jump2 && !instance_exists(obj_optionkeyselect)) {
+	
+}
+if (menu[sectionselect][selected] == "SHADOWS" && key_jump2)
+{
+	switch (global.shadows)
+	{
+		case 0:
+			global.shadows = 1
+			break
+		case 1:
+			global.shadows = 0
+			break
+		default:
+			global.shadows = 1
+			break
+	}
+}
 }
 audio_master_gain(global.vol);
 global.vol = clamp(global.vol, 0, 1)
 global.musicvol = clamp(global.musicvol, 0, 1)
 global.audiovol = clamp(global.audiovol, 0, 1)
+if (global.fullscreen == 2)
+window_set_position(0, 0)

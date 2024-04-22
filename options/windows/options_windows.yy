@@ -9,7 +9,7 @@
   "option_windows_copyright_info": "",
   "option_windows_description_info": "a game about some guy beating the fuck out of meat idk",
   "option_windows_disable_sandbox": false,
-  "option_windows_display_cursor": false,
+  "option_windows_display_cursor": true,
   "option_windows_display_name": "Meat Tower",
   "option_windows_enable_steam": false,
   "option_windows_executable_name": "meaty_towery.exe",

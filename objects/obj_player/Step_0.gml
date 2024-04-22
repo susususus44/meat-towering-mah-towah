@@ -1,3 +1,4 @@
+isnoisy = global.isnoisy
 ds_queue_enqueue(global.follower_queue, [x, y]);
 if state != states.noclip
 	scr_collision()

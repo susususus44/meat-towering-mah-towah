@@ -2,61 +2,61 @@ function translate_keycode(key) {
     var ret;
     switch (key) {
         case 8:
-            ret = "Backspace";
+            ret = "BACKSPACE";
             break;
         case 9:
-            ret = "Tab";
+            ret = "TAB";
             break;
         case 13:
-            ret = "Enter";
+            ret = "ENTER";
             break;
         case 16:
-            ret = "Shift";
+            ret = "SHIFT";
             break;
         case 17:
-            ret = "Ctrl";
+            ret = "CTRL";
             break;
         case 18:
-            ret = "Alt";
+            ret = "ALT";
             break;
         case 19:
-            ret = "Pause/Break";
+            ret = "PAUSE/BREAK";
             break;
         case 20:
-            ret = "Caps Lock";
+            ret = "CAPS LOCK";
             break;
         case 27:
-            ret = "Escape";
+            ret = "ESCAPE";
             break;
         case 32:
-            ret = "Space";
+            ret = "SPACE";
             break;
         case 33:
-            ret = "Page Up";
+            ret = "PAGE UP";
             break;
         case 34:
-            ret = "Page Down";
+            ret = "PAGE DOWN";
             break;
         case 35:
-            ret = "End";
+            ret = "END";
             break;
         case 36:
-            ret = "Home";
+            ret = "HOME";
             break;
         case 37:
-            ret = "Left Arrow";
+            ret = "LEFT ARROW";
             break;
         case 38:
-            ret = "Up Arrow";
+            ret = "UP ARROW";
             break;
         case 39:
-            ret = "Right Arrow";
+            ret = "RIGHT ARROW";
             break;
         case 40:
-            ret = "Down Arrow";
+            ret = "DOWN ARROW";
             break;
         case 46:
-            ret = "Delete";
+            ret = "DELETE";
             break;
         case 48:
             ret = "0";
@@ -203,9 +203,10 @@ function translate_keycode(key) {
             ret = "F12";
             break;
         default:
-            ret = "Unknown";
-    }
-    return ret;
+            ret = "UNKNOWN";
+			break;
+	}
+	return ret;
 }
 
 function insertinputs(argument0)

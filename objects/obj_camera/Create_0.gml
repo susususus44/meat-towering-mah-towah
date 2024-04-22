@@ -1,3 +1,4 @@
+
 global.grav = 0
 global.collect = 0
 angle = 0

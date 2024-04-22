@@ -1,3 +1,4 @@
+scr_writeinputglobals()
 ini_open("options.ini")
 global.vol = ini_read_real("options", "volume", 1);
 global.musicvol = ini_read_real("options", "musicvolume", 1);
@@ -8,6 +9,10 @@ global.item = ini_read_real("options", "item", 0)
 global.mcpigbrother = ini_read_real("options", "mcpigsbrother", 1)
 global.vsync = ini_read_real("options", "vsync", 1)
 global.intro = ini_read_real("options", "intro", 1)
+global.shadows = ini_read_real("options", "shadows", 1)
+global.windowscale = ini_read_real("options", "windowscale", 1)
+global.isnoisy = ini_read_real("options", "isnoisy", 0)
+window_set_size(960 * global.windowscale, 540 * global.windowscale)
 window_set_fullscreen(global.fullscreen)
 audio_master_gain(global.vol);
 ini_close()

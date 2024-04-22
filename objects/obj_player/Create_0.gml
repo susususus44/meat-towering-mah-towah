@@ -25,7 +25,6 @@ enum states {
 	actor,
 	timesup,
 }
-global.doorrestartto = "A"
 global.roomrestartto = 0
 global.resettox = 0
 global.resettoy = 0
@@ -33,20 +32,22 @@ global.resettoroom = 0
 global.visiblecollisions = 0
 global.fill = 0
 global.panic = 0
-global.saveroom = ds_list_create()
-global.baddieroom = ds_list_create()
-global.respawnroom = ds_list_create()
 global.respawnroom = 0
 global.respawntox = 0
 global.respawntoy = 0
-global.doorrestartto = "A"
 global.roomrestartto = 0
+global.doorrestartto = "A"
+global.doorrestartto = "A"
+global.saveroom = ds_list_create()
+global.baddieroom = ds_list_create()
+global.respawnroom = ds_list_create()
 global.defaultfont = font_add_sprite_ext(spr_font, "abcdefghijklmnopqrstuvwxyz,.!?ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890", 1, 0)
 global.bigfont = font_add_sprite_ext(spr_bigfont, "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890#", 1, 0)
 global.titlecardfont = font_add_sprite_ext(spr_titlecardfont, "ABCDEFGHIJKLMNOPQRSTUVWXYZ", 1, 0)
 global.collectfont = font_add_sprite_ext(spr_collectfont, "1234567890", 0, -5)
 lives = 3
 health = 5
+actortimer = 0
 isnoisy = 0
 hallway = 0
 hallwaydir = 0
