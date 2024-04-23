@@ -1,9 +1,8 @@
 scr_getinput()
 menuselect = []
-array_push(menuselect, [(global.bloodenabled == 1 ? "ON" : "OFF"), (global.mcpigbrother == 1 ? "ON" : "OFF"), (global.intro == 1 ? "ON" : "OFF"), (global.shadows == 1 ? "ON" : "OFF")])
+array_push(menuselect, [(global.bloodenabled == 1 ? "ON" : "OFF"), (global.mcpigbrother == 1 ? "ON" : "OFF"), (global.intro == 1 ? "ON" : "OFF"), (global.shadows == 1 ? "ON" : "OFF"), (global.isnoisy == 1 ? spr_liveiconnoise : spr_liveicon)])
 array_push(menuselect, [(global.fullscreen == 1 ? "FULLSCREEN" : (global.fullscreen == 2 ? "BORDERLESS WINDOW" : "WINDOWED")), (global.vsync ? "ON" : "OFF"), string_concat(global.windowscale, "X")])
 array_push(menuselect, [floor(global.vol * 100), floor(global.musicvol * 100), floor(global.audiovol * 100)])
-array_push(menuselect, ["PRESS JUMP"])
 bgy += 0.9
 bgx += 0.9
 index += 0.35
@@ -34,7 +33,6 @@ if key_jump2
 	
 if (key_attack)
 {
-	instance_create_depth(x, y, depth - 1, obj_saveicon)
 	instance_destroy()
 }
 }
@@ -51,6 +49,21 @@ if (menu[sectionselect][selected] == "BLOOD EFFECT" && key_jump2)
 			break
 		default:
 			global.bloodenabled = 1
+			break
+	}
+}
+if (menu[sectionselect][selected] == "CHARACTER" && key_jump2)
+{
+	switch (global.isnoisy)
+	{
+		case 0:
+			global.isnoisy = 1
+			break
+		case 1:
+			global.isnoisy = 0
+			break
+		default:
+			global.isnoisy = 1
 			break
 	}
 }

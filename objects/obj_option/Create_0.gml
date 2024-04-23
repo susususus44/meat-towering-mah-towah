@@ -1,12 +1,15 @@
 if (instance_exists(obj_pause) && !obj_pause.opened)
 	instance_destroy()
 menu = []
-array_push(menu, ["BLOOD EFFECT", "MCPIGS BROTHER", "STARTING INTRO", "SHADOWS"])
+if (room == Mainmenu)
+	array_push(menu, ["BLOOD EFFECT", "MCPIGS BROTHER", "STARTING INTRO", "SHADOWS", "CHARACTER"])
+else
+	array_push(menu, ["BLOOD EFFECT", "MCPIGS BROTHER", "STARTING INTRO", "SHADOWS"])
 array_push(menu, ["WINDOW MODE", "VSYNC"])
 array_push(menu, ["MASTER VOLUME", "MUSIC VOLUME", "SFX VOLUME"])
 array_push(menu, ["NOT DONE YET",])
 menuselect = []
-array_push(menuselect, [(global.bloodenabled == 1 ? "ON" : "OFF"), (global.mcpigbrother == 1 ? "ON" : "OFF"), (global.intro == 1 ? "ON" : "OFF"), (global.shadows == 1 ? "ON" : "OFF")])
+array_push(menuselect, [(global.bloodenabled == 1 ? "ON" : "OFF"), (global.mcpigbrother == 1 ? "ON" : "OFF"), (global.intro == 1 ? "ON" : "OFF"), (global.shadows == 1 ? "ON" : "OFF"), (global.isnoisy == 1 ? spr_liveiconnoise : spr_liveicon)])
 array_push(menuselect, [(global.fullscreen == 1 ? "FULLSCREEN" : (global.fullscreen == 2 ? "BORDERLESS WINDOW" : "WINDOWED"))])
 array_push(menuselect, [floor(global.vol * 100), floor(global.musicvol * 100), floor(global.audiovol * 100)])
 array_push(menuselect, [""])

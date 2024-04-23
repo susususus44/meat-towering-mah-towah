@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "Script183",
+  "name": "scr_pause",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {

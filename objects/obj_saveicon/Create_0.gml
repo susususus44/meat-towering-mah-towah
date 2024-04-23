@@ -1,5 +1,10 @@
+enum savetype {
+	settings,
+}
 image_speed = 0.6
-fadeout = 0
+fadeout = false
 drawy = 100
 fade = 0
-timer = irandom_range(50, 300)
+saving = false
+timer = 0
+savingtype = savetype.settings

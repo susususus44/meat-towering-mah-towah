@@ -1,6 +1,5 @@
-menu = ["FILE", "OPTIONS", "EXIT GAME"]
-audio_play_sound(mu_menu, 1, true)
 scr_initinput()
+menu = ["FILE", "OPTIONS", "EXIT GAME"]
 selected = 0
 menugui = 0
 menugui1 = 1200

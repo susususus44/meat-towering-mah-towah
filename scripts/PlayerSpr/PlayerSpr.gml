@@ -38,7 +38,7 @@ function playerspr(){
 	spr_hurt = spr_player_hurt
 	spr_timesup = spr_player_timesup
 	spr_palette = global.palspr
-	if isnoisy //noise my favourite
+	if global.isnoisy //noise my favourite
 	{
 		spr_idle = spr_playerN_idle
 		spr_move = spr_playerN_move

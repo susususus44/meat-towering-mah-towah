@@ -1,5 +1,8 @@
-isnoisy = global.isnoisy
-ds_queue_enqueue(global.follower_queue, [x, y]);
+if (isnoisy != global.isnoisy)
+{
+	isnoisy = global.isnoisy
+	PlayerSpr()
+}
 if state != states.noclip
 	scr_collision()
 hitbuffer--
