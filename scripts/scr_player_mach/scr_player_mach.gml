@@ -39,9 +39,9 @@ function scr_player_mach(){
 	}
 	if (!key_run && grounded)
 	{
-		state = states.normal
-		hsp = 0
-		movespeed = 0
+		state = states.machslide
+		sprite_index = spr_machslidestart
+		image_index = 0
 	}
 	if (key_jump2 && grounded)
 	{	
@@ -61,7 +61,7 @@ function scr_player_mach(){
 		sprite_index = spr_run
 		flash = 1
 	}
-	if (grounded && key_attack2)
+	if (grounded && key_attack2 && !key_up)
 	{
 		audio_stop_sound(sfx_walk)
 		state = states.punch
@@ -69,6 +69,13 @@ function scr_player_mach(){
 		image_speed = 0.35
 		image_index = 0
 		scr_soundeffect(sfx_punchcharge)
+	}
+	else if (key_attack2 && key_up)
+	{
+		state = states.bombjump
+		sprite_index = spr_throw2
+		image_speed = 0.35
+		image_index = 5
 	}
 	if (place_meeting_solid(x + 1 * xscale, y) && grounded && !place_meeting(x + 1 * xscale, y, obj_destroyable))
 	{
@@ -110,7 +117,7 @@ function scr_player_mach(){
 		state = states.machslide
 		image_index = 0
 		image_speed = 0.35
-		sprite_index = spr_machslidestart
+		sprite_index = spr_machslideboost
 	}
 	if (key_down2 && !grounded)
 	{

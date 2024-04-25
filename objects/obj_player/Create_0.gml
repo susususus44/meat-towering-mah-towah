@@ -24,6 +24,7 @@ enum states {
 	crusher,
 	actor,
 	timesup,
+	bombjump,
 }
 global.roomrestartto = 0
 global.resettox = 0
@@ -47,6 +48,8 @@ global.titlecardfont = font_add_sprite_ext(spr_titlecardfont, "ABCDEFGHIJKLMNOPQ
 global.collectfont = font_add_sprite_ext(spr_collectfont, "1234567890", 0, -5)
 lives = 3
 health = 5
+doublejump = false
+landanim = false
 actortimer = 0
 isnoisy = 0
 hallway = 0

@@ -56,5 +56,6 @@ function scr_pause_exit() {
     }
 	instance_create(0, 0, obj_audiomanager)
 	instance_create(0, 0, obj_music)
+	instance_create(0, 0, obj_saveicon)
     instance_destroy(obj_levelstart)
 }

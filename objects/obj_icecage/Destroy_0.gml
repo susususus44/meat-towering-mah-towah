@@ -19,7 +19,10 @@ if (ds_list_find_index(global.saveroom, id) == -1)
 	else
 	{
 		with(instance_create_depth(x, y, depth, content))
+		{
 			count = global.amountoftoppins
+			sprite_index = spr_intro
+		}
 	}
 }
 ds_list_add(global.saveroom, id)

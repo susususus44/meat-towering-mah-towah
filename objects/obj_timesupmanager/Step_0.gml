@@ -13,7 +13,7 @@ if (!audio_is_playing(mu_gameover))
 		{
 			with (instance_create(x, y, obj_levelstart))
 			{
-				timer = 120
+				timer = 80
 				level = "BACK TO HUB"
 			}
 		}

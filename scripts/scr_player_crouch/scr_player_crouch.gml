@@ -20,7 +20,7 @@ function scr_player_crouch(){
 		image_speed = 0.35
 		movespeed = 0
 	}
-	if (key_jump2)
+	if (key_jump2 && (!(place_meeting_solid(x, (y - 16)))) && (!(place_meeting_solid(x, (y - 32)))))
 	{	
 		audio_stop_sound(sfx_walk)
 		instance_create(x, y, obj_effect)
@@ -39,7 +39,7 @@ function scr_player_crouch(){
 		image_index = 0
 		sprite_index = spr_crouchfall
 	}
-	if (!key_down && !place_meeting(x, y - 16, obj_solid))
+	if (!key_down && (!(place_meeting_solid(x, (y - 16)))) && (!(place_meeting_solid(x, (y - 32)))))
 	{
 		state = states.normal
 		sprite_index = spr_idle

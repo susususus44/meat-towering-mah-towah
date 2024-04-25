@@ -1,4 +1,5 @@
 function scr_player_jump(){
+	doublejump = false
 	if (!momentum)
         hsp = (move * movespeed)
     else
@@ -8,12 +9,15 @@ function scr_player_jump(){
 	
     if (sprite_index == spr_jump && floor(image_index) == (image_number - 1))
         sprite_index = spr_fall
+    if (sprite_index == spr_player_backflip && floor(image_index) == (image_number - 1))
+        sprite_index = spr_fall
 	if (sprite_index == spr_jump2 && floor(image_index) == (image_number - 1))
         sprite_index = spr_fall2
 	if (sprite_index == spr_slamjump1 && floor(image_index) == (image_number - 1))
         sprite_index = spr_slamjump2
 	if (vsp >= 0 && grounded)
 	{
+	landanim = true
 	if (key_jump2)
 	{	
 		state = states.jump
@@ -55,7 +59,7 @@ function scr_player_jump(){
 		vsp = -3
 		image_index = 0
 	}
-	if (key_attack2)
+	if (key_attack2 && !key_up)
 	{
 		audio_stop_sound(sfx_walk)
 		state = states.punch
@@ -63,6 +67,13 @@ function scr_player_jump(){
 		image_speed = 0.35
 		image_index = 0
 		scr_soundeffect(sfx_punchcharge)
+	}
+	else if (key_attack2 && key_up)
+	{
+		state = states.bombjump
+		sprite_index = spr_throw2
+		image_speed = 0.35
+		image_index = 5
 	}
 	checkplayercrusher()
 }

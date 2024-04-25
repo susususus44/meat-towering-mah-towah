@@ -13,20 +13,45 @@ function scr_player_normal(){
 		var idlespr = spr_idle
 		var movespr = spr_move
 		image_speed = 0.35
+		if (sprite_index == movespr)
+			image_speed = 0.5
 	}
 	if (instance_exists(obj_runeffect))
 		obj_runeffect.image_xscale = xscale
-	if (sprite_index == spr_land && floor(image_index) == (image_number - 1))
-        sprite_index = idlespr
-	if (sprite_index == spr_land2 && floor(image_index) == (image_number - 1))
-        sprite_index = movespr
-	if (sprite_index == spr_machslideend && floor(image_index) == (image_number - 1))
-        sprite_index = idlespr
+	if (landanim) {
+		if (sprite_index == spr_land)
+		{
+			if (floor(image_index) == (image_number - 1))
+			{
+				landanim = false
+				sprite_index = idlespr
+				image_index = 0
+			}
+		}
+		else if (sprite_index == spr_land2 && floor(image_index) == (image_number - 1))
+		{
+			if (floor(image_index) == (image_number - 1))
+			{
+				landanim = false
+				sprite_index = movespr
+				image_index = 0
+			}
+		}
+		else if (sprite_index == spr_machslideend && floor(image_index) == (image_number - 1))
+		{
+			if (floor(image_index) == (image_number - 1))
+			{
+				landanim = false
+				sprite_index = idlespr
+				image_index = 0
+			}
+		}
+	}
 	if (move != 0)
 	{
 		if (sprite_index != spr_run && !audio_is_playing(sfx_walk))
 			scr_soundeffect(sfx_walk)
-		if (sprite_index != spr_land2)
+		if (!landanim)
 			sprite_index = movespr
 		xscale = move
 		movespeed = 4
@@ -36,11 +61,11 @@ function scr_player_normal(){
 	else if (sprite_index != spr_land && sprite_index != spr_machslideend)
 	{
 		audio_stop_sound(sfx_walk)
-		if (sprite_index != spr_land)
+		if (!landanim)
 			sprite_index = idlespr
 		movespeed = 0
 	}
-	if (key_run)
+	if (key_run && !(place_meeting((x + xscale), y, obj_solid)))
 	{
 		movespeed = 6
 		state = states.mach
@@ -71,7 +96,7 @@ function scr_player_normal(){
 		image_index = 0
 		sprite_index = (runjump == 1 ? spr_fall2 : spr_fall)
 	}
-	if (grounded && key_attack2)
+	if (grounded && key_attack2 && !key_up)
 	{
 		audio_stop_sound(sfx_walk)
 		state = states.punch
@@ -79,6 +104,13 @@ function scr_player_normal(){
 		image_speed = 0.35
 		image_index = 0
 		scr_soundeffect(sfx_punchcharge)
+	}
+	else if (grounded && key_attack2 && key_up)
+	{
+		state = states.bombjump
+		sprite_index = spr_throw2
+		image_speed = 0.35
+		image_index = 5
 	}
 	if (grounded && key_knife2)
 	{
@@ -89,7 +121,7 @@ function scr_player_normal(){
 		image_index = 0
 		movespeed = 0
 	}
-	if (key_down)
+	if (key_down && !place_meeting_solid(x, (y - 3)) || place_meeting(x, y, obj_solid))
 	{
 		state = states.crouch
 		sprite_index = spr_crouchstart

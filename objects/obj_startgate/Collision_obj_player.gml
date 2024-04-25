@@ -15,6 +15,7 @@ with (other) {
 		targetRoom = other.targetRoom
 		sprite_index = spr_entergate
 		image_index = 0
+		image_speed = 0.35
 		state = states.door
 	}
 }

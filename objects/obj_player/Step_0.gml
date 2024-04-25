@@ -96,6 +96,9 @@ switch (state)
 	case states.timesup:
 		scr_player_timesup()
 		break
+	case states.bombjump:
+		scr_player_bombjump()
+		break
 }
 if (scr_press(vk_f5))
 	state = states.noclip //cheater // hell yeah i am one

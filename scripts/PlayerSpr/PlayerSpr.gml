@@ -30,6 +30,8 @@ function playerspr(){
 	spr_walkfront = spr_player_comeoutdoor
 	spr_entergate = spr_player_entergate
 	spr_machslidestart = spr_player_machslidestart
+	spr_machslide = spr_player_machslide
+	spr_machslideend = spr_player_machslideend
 	spr_bump = spr_player_bump	
 	spr_slamjump1 = spr_player_slamjump
 	spr_slamjump2 = spr_player_slamjump2
@@ -37,6 +39,7 @@ function playerspr(){
 	spr_throw2 = spr_player_bombthrow
 	spr_hurt = spr_player_hurt
 	spr_timesup = spr_player_timesup
+	spr_machslideboost = spr_player_machslideboost
 	spr_palette = global.palspr
 	if global.isnoisy //noise my favourite
 	{
