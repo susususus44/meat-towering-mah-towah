@@ -34,7 +34,6 @@ function scr_player_jump(){
 	}
 	else {
 		state = states.normal
-		hsp = 0
 		movespeed = 0 
 		if (movespeed != 0)
 			sprite_index = spr_land2
