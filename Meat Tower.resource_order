@@ -373,6 +373,7 @@
     {"name":"spr_cageham","order":46,"path":"sprites/spr_cageham/spr_cageham.yy",},
     {"name":"scribble_font_add_all","order":1,"path":"scripts/scribble_font_add_all/scribble_font_add_all.yy",},
     {"name":"scr_player_machroll","order":13,"path":"scripts/scr_player_machroll/scr_player_machroll.yy",},
+    {"name":"par_meatkin","order":31,"path":"objects/par_meatkin/par_meatkin.yy",},
     {"name":"spr_bigfont","order":4,"path":"sprites/spr_bigfont/spr_bigfont.yy",},
     {"name":"scr_wave","order":6,"path":"scripts/scr_wave/scr_wave.yy",},
     {"name":"scribble_font_set_default","order":14,"path":"scripts/scribble_font_set_default/scribble_font_set_default.yy",},

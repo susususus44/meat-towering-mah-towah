@@ -13,8 +13,8 @@
     "path": "folders/Objects/Level.yy",
   },
   "parentObjectId": {
-    "name": "obj_followcharacter",
-    "path": "objects/obj_followcharacter/obj_followcharacter.yy",
+    "name": "par_meatkin",
+    "path": "objects/par_meatkin/par_meatkin.yy",
   },
   "persistent": true,
   "physicsAngularDamping": 0.1,

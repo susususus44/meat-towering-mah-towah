@@ -427,6 +427,7 @@
     {"id":{"name":"spr_cageham","path":"sprites/spr_cageham/spr_cageham.yy",},},
     {"id":{"name":"scribble_font_add_all","path":"scripts/scribble_font_add_all/scribble_font_add_all.yy",},},
     {"id":{"name":"scr_player_machroll","path":"scripts/scr_player_machroll/scr_player_machroll.yy",},},
+    {"id":{"name":"par_meatkin","path":"objects/par_meatkin/par_meatkin.yy",},},
     {"id":{"name":"spr_bigfont","path":"sprites/spr_bigfont/spr_bigfont.yy",},},
     {"id":{"name":"scr_wave","path":"scripts/scr_wave/scr_wave.yy",},},
     {"id":{"name":"scribble_font_set_default","path":"scripts/scribble_font_set_default/scribble_font_set_default.yy",},},
