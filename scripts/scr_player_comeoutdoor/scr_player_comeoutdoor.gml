@@ -4,6 +4,7 @@ function scr_player_comeoutdoor(){
 	image_speed = 0.35
 	hsp = 0
 	vsp = 0
+	landanim = false
 	movespeed = 0
 	shadowalpha = Approach(shadowalpha, 0, 0.02)
 	if (sprite_index == spr_walkfront && floor(image_index) == (image_number - 1))

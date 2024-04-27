@@ -26,8 +26,11 @@ if (selected == -1)
 		menugui = 200 * move1
 	}
 }
-var plus = (selected >= 2 ? (selected - 2) * 100 : 0)
-menugui1 = Approach(menugui1, 100 - plus, 7)
+if (array_length(menuselect[sectionselect]) > 5)
+	var plus = (selected >= 3 ? (selected - 3) * 100 : 0)
+else
+	plus = 0
+menugui1 = Approach(menugui1, 100 - plus, 18)
 if key_jump2
 	scr_soundeffect(sfx_punch1)
 	

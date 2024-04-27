@@ -9,10 +9,10 @@ function scr_player_cling(){
 	if floor(image_index) == image_number - 1 && sprite_index == spr_player_clingjump
 	{
 		state = states.mach
-		vsp = -7
+		vsp = -8
 		xscale *= -1
 		movespeed = 6
-		sprite_index = spr_player_run
+		sprite_index = spr_player_runjump
 	}
 	if key_down
 	{

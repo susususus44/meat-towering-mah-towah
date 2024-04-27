@@ -51,6 +51,7 @@ function scr_player_mach(){
 		grav = 0.2
 		image_index = 0
 	}
+	if (grounded) {
 	if (movespeed >= 8 && sprite_index == spr_run)
 	{
 		sprite_index = spr_mach
@@ -60,6 +61,7 @@ function scr_player_mach(){
 	{
 		sprite_index = spr_run
 		flash = 1
+	}
 	}
 	if (grounded && key_attack2 && !key_up)
 	{
