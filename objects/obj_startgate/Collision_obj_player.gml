@@ -1,5 +1,5 @@
 with (other) {
-	if (key_up2 && grounded && sprite_index != spr_lookdoor && sprite_index != spr_walkfront) {
+	if (key_up2 && grounded && sprite_index != spr_entergate && sprite_index != spr_walkfront) {
 		global.roomrestartto = other.targetRoom
 		global.doorrestartto = other.targetDoor
 		global.resettox = x

@@ -52,12 +52,12 @@ function scr_player_mach(){
 		image_index = 0
 	}
 	if (grounded) {
-	if (movespeed >= 8 && sprite_index == spr_run)
+	if (movespeed >= 8 && sprite_index == spr_run || sprite_index = spr_player_runjump)
 	{
 		sprite_index = spr_mach
 		flash = 1
 	}
-	if (movespeed <= 8 && sprite_index == spr_mach)
+	if (movespeed <= 8 && sprite_index == spr_mach || sprite_index = spr_player_runjump)
 	{
 		sprite_index = spr_run
 		flash = 1
