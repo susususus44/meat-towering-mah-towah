@@ -7,7 +7,6 @@ with (other) {
 		global.resettoroom = room
 		global.levelsaveto = other.level
 		global.levelname = other.levelname
-		audio_stop_all()
 		hsp = 0
 		movespeed = 0
 		vsp = 0

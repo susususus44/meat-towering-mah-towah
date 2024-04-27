@@ -40,6 +40,7 @@ function scr_player_jump(){
 		else
 			sprite_index = spr_land
 		scr_soundeffect(sfx_land)
+		landanim = true
 	}
 	}
 	if (move != 0 && !momentum)
@@ -73,6 +74,15 @@ function scr_player_jump(){
 		sprite_index = spr_throw2
 		image_speed = 0.35
 		image_index = 5
+	}
+	if (key_knife2)
+	{
+		audio_stop_sound(sfx_walk)
+		state = states.throwknife
+		sprite_index = spr_throw1
+		image_speed = 0.35
+		image_index = 4
+		movespeed = hsp * xscale
 	}
 	checkplayercrusher()
 }

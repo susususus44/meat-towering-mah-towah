@@ -1,12 +1,16 @@
-if (room != testroom) {
-for (var i = 1; i < array_length(musicarray); ++i)
+if (!global.panic) {
+for (var i = 0; i < array_length(musicarray); ++i)
 {
-	var prevmusic = array_get(musicarray[i - 1], 1)
     var curroom = array_get(musicarray[i], 0)
     var curmusic = array_get(musicarray[i], 1)
-    if (room != testroom && room == curroom && !audio_is_playing(curmusic))
+    if (room == curroom && !audio_is_playing(curmusic))
     {
-		audio_stop_sound(prevmusic)
+		for (var l = 0; l < array_length(musicarray); ++l)
+		{
+			var mus = array_get(musicarray[l], 1)
+			if (mus != curmusic)
+				audio_stop_sound(mus)
+		}
         audio_play_sound(curmusic, 1, true)
     }
 }

@@ -1,1 +1,1 @@
-audio_stop_sound(mu_music)
+audio_stop_sound(mu_boombox)

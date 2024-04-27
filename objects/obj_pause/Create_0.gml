@@ -18,5 +18,5 @@ bgy = 0
 bgx = 0
 between = 0
 length = 0
-depth = -99
+depth = -200
 image_speed = 0.35

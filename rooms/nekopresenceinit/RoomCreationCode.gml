@@ -17,6 +17,7 @@ window_set_fullscreen(global.fullscreen)
 audio_master_gain(global.vol);
 ini_close()
 scr_initinputglobals()
+global.panic = false
 global.debug = true
 global.amountoftoppins = 0
 global.file = 0

@@ -77,8 +77,7 @@ function scr_player_normal(){
 	{	
 		state = states.jump
 		audio_stop_sound(sfx_walk)
-		instance_create(x, y, obj_effect)
-		obj_effect.sprite_index = spr_jumpeffect
+		scr_create_effect(spr_jumpdust)
 		vsp = -6
 		movespeed = 4
 		momentum = 0
@@ -119,7 +118,6 @@ function scr_player_normal(){
 		sprite_index = spr_throw1
 		image_speed = 0.35
 		image_index = 0
-		movespeed = 0
 	}
 	if (key_down && !place_meeting_solid(x, (y - 3)) || place_meeting(x, y, obj_solid))
 	{

@@ -20,7 +20,7 @@ function scr_player_knifethrow(){
 			with (instance_create_layer(x, y + 2, "Instances_1", obj_bomb))
 			{
 				image_xscale = other.xscale
-				vsp = -4
+				vsp = -6
 				hsp = 8
 			}
 		}
@@ -28,8 +28,10 @@ function scr_player_knifethrow(){
 	}
 	if (floor(image_index) == (image_number - 1))
 	{
+		landanim = false
 		state = states.normal
 		knifethrown = false
 	}
 	hsp = (movespeed * xscale)
+	movespeed = Approach(movespeed, 0, 0.1)
 }
