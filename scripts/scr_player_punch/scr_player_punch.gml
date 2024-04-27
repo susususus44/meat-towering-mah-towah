@@ -1,4 +1,5 @@
 function scr_player_punch(){
+	landanim = false
 	if sprite_index == spr_punchprep
 		charge++
 	if charge >= 100 && sprite_index == spr_punchprep

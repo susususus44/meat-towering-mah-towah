@@ -18,7 +18,3 @@ with (other) {
 		state = states.door
 	}
 }
-ini_open(global.file)
-var points = ini_read_real(level, "collect", 0)
-ini_close()
-draw_text(0, 0, points)
