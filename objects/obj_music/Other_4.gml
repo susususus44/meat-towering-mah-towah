@@ -11,7 +11,9 @@ for (var i = 0; i < array_length(musicarray); ++i)
 			if (mus != curmusic)
 				audio_stop_sound(mus)
 		}
+	
         audio_play_sound(curmusic, 1, true)
+		show_debug_message("PLAYED AUDIO ", audio_get_name(curmusic))
     }
 }
 }

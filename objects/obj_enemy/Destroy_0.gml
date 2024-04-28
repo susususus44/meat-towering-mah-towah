@@ -1,8 +1,7 @@
 if (ds_list_find_index(global.baddieroom, id) == -1)
 {
 	audio_play_sound(sfx_enemyhit, 1, false)
-	if (object_index != obj_fish)
-		scr_blood_create(50)
+		scr_blood_create(80)
 	scr_create_particle(spr_gibs, 0)
 	scr_create_particle(spr_gibs, 1)
 	scr_create_particle(spr_gibs, 2)

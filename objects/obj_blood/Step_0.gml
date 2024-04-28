@@ -1,7 +1,16 @@
-if (!done)
-	scr_collision()
 vsp += 0.3
-done = place_meeting(x - 1, y, par_collision) || place_meeting(x + 1, y, par_collision) || place_meeting(x, y - 1, par_collision) || place_meeting(x, y + 1,  par_collision)
+done = false
+if (place_meeting(x, y, obj_solid) || place_meeting(x, y, obj_slope))
+	done = 1
+if (!done)
+{
+	x += hsp
+	y += vsp
+}
+if (done)
+	image_angle = 90 * randomspin
+else
+	image_angle += 90
 bloodcooldown++
 if (bloodcooldown >= 600)
 {
