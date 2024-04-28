@@ -26,6 +26,7 @@ enum states {
 	timesup,
 	bombjump,
 }
+global.levelname = ""
 global.roomrestartto = 0
 global.resettox = 0
 global.resettoy = 0
