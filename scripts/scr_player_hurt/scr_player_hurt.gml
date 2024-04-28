@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377
 function scr_player_hurt(){
 	audio_stop_sound(sfx_punchcharge)
-	if (grounded && vsp >= 0)
+    if (grounded && vsp >= 0)
 	{
 		hitbuffer = 100
 		state = states.normal

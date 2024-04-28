@@ -9,6 +9,7 @@ if (!audio_is_playing(mu_gameover))
 	obj_player1.image_index = 0
 	obj_player1.movespeed = 0
 	obj_player1.exitlevel = 1
+	obj_player1.healthpoints = 5;
 		if (!instance_exists(obj_levelstart))
 		{
 			with (instance_create(x, y, obj_levelstart))

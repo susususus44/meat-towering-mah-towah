@@ -11,8 +11,15 @@ function scr_player_knifethrow(){
 			with (instance_create_layer(x, y + 2, "Instances_1", obj_knife))
 			{
 				image_xscale = other.xscale
+				if (!other.key_up) {
 				vsp = -4
 				hsp = 8
+				}
+				else {
+				image_angle = 90;	
+				vsp = -8
+				hsp = 0
+				}
 			}
 		}
 		if (global.item == 1)

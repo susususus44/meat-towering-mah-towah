@@ -8,6 +8,7 @@ function scr_hurtplayer(argument0){
 		scr_create_effect(spr_hurteffect)
 		state = states.hurt
 		vsp = -10
+		healthpoints--;
 		xscale *= -1
 		movespeed = (other.object_index != obj_rollingpig ? 8 : 16)
 		hsp = (other.object_index != obj_rollingpig ? 5 : 16)
@@ -16,6 +17,11 @@ function scr_hurtplayer(argument0){
 		image_speed = 0.35
 		global.collect -= 10
 		global.collect = clamp(global.collect, 0, 10000000000)
+		if (healthpoints = 0) {
+	    global.panic = false;
+    	audio_stop_all();
+    	room_goto(rm_timesup);
+	    }
 	}
 	}
 }
