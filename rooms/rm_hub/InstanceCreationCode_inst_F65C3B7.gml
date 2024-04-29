@@ -1,4 +1,4 @@
-targetRoom = meat_travel_test
+targetRoom = "kys"
 targetDoor = "A"
 level = "meathoteltest"
 levelname = "PIZDA"
