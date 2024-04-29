@@ -42,6 +42,8 @@
     {"name":"inst_7AF51D5D","path":"rooms/rm_2/rm_2.yy",},
     {"name":"inst_41BE804","path":"rooms/rm_2/rm_2.yy",},
     {"name":"inst_66CD78CC","path":"rooms/rm_2/rm_2.yy",},
+    {"name":"inst_561CA1EF","path":"rooms/rm_2/rm_2.yy",},
+    {"name":"inst_34031F7E","path":"rooms/rm_2/rm_2.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -81,6 +83,8 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_7AF51D5D","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_door","path":"objects/obj_door/obj_door.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2272.0,"y":576.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_41BE804","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_doorA","path":"objects/obj_doorA/obj_doorA.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2304.0,"y":640.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_66CD78CC","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_solid","path":"objects/obj_solid/obj_solid.yy",},"properties":[],"rotation":0.0,"scaleX":3.0,"scaleY":1.0,"x":2272.0,"y":672.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_561CA1EF","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_door_whereami","path":"objects/obj_door_whereami/obj_door_whereami.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":544.0,"y":512.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_34031F7E","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_meattraveldoor","path":"objects/obj_meattraveldoor/obj_meattraveldoor.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2144.0,"y":608.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"Tiles_1","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"tiles":{"SerialiseHeight":38,"SerialiseWidth":88,"TileCompressedData":[
 -628,67,-26,77,-62,67,1,77,-24,55,1,77,-62,67,3,77,55,58,-20,65,3,58,55,77,-62,67,3,77,55,56,-20,-2147483648,3,54,55,77,-62,67,3,77,55,56,-20,-2147483648,2,54,55,-18,77,-45,67,3,77,55,56,-20,-2147483648,1,54,-16,55,-2,58,1,77,-12,67,-11,77,-22,67,3,77,55,56,-20,-2147483648,1,64,-16,65,-2,58,1,77,-12,67,1,
