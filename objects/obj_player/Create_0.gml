@@ -63,7 +63,7 @@ exitlevel = 0
 charge = 0
 shadowalpha = 0
 hitbuffer = 0
-coop = 0
+coop = false;
 xscale = 1
 yscale = 1
 rot = 1
@@ -78,6 +78,7 @@ machafterimage = 10
 slamafterimage = 5
 instakill = false
 knifethrown = false
+playerpal = 0;
 depth = -999
 scr_initinput()
 scr_collision_init()

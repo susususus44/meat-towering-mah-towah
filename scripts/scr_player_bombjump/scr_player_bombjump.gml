@@ -18,6 +18,6 @@ function scr_player_bombjump(){
 		image_index = 0
 		vsp = -9
 		jumpstop = true
-		movespeed = 2
+		//movespeed = 2
 	}
 }
