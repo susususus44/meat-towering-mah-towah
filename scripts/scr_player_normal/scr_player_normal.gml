@@ -131,4 +131,13 @@ function scr_player_normal(){
 		state = states.crouch
 		sprite_index = spr_player_crouch
 	}
+	if (place_meeting(x,y,obj_palswapper)) && (key_up2)
+	{
+	if (playerpal < 5)
+	{
+	playerpal++	
+	}
+	else
+	playerpal = 1;
+	}
 }
