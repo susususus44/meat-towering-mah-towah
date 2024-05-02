@@ -4,12 +4,12 @@ with (other)
 	{
 		movespeed = 0
 		hsp = 0
-		vsp = 3
+		state = states.ladder
 	}
 	if key_up
 	{
 		movespeed = 0
 		hsp = 0
-		vsp = -3
+		state = states.ladder
 	}
 }

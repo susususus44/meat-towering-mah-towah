@@ -25,6 +25,7 @@ enum states {
 	actor,
 	timesup,
 	bombjump,
+	ladder,
 }
 global.levelname = ""
 global.roomrestartto = 0
