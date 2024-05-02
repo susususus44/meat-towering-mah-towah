@@ -78,7 +78,7 @@ machafterimage = 10
 slamafterimage = 5
 instakill = false
 knifethrown = false
-playerpal = 0;
+playerpal = 1
 depth = -999
 scr_initinput()
 scr_collision_init()

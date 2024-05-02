@@ -1,7 +1,7 @@
 index += 0.35
 with (obj_player)
 {		
-	pal_swap_set(spr_palette, 1, false)
+	pal_swap_set(spr_palette, playerpal, false)
 	if (state == states.comeoutdoor)
 		var doorshade = Approach(1, 0, 0.1)
 	else

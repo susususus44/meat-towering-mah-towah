@@ -14,6 +14,7 @@ function scr_player_bombjump(){
 			shake_mag_acc = 0.1
 		}
 		state = states.jump
+		momentum = true
 		sprite_index = spr_player_backflip
 		image_index = 0
 		vsp = -9
