@@ -3,6 +3,10 @@ if (isnoisy != global.isnoisy)
 	isnoisy = global.isnoisy
 	PlayerSpr()
 }
+if (spymode)
+{
+	PlayerSpr()
+}
 if state != states.noclip
 	scr_collision()
 hitbuffer--
@@ -171,6 +175,21 @@ if scr_press(vk_f1)
 	else if isnoisy
 	{
 		isnoisy = 0
+		audio_play_sound(sfx_door, 1, false)
+	}
+	playerspr()
+	
+}
+if scr_press(vk_f12)
+{
+	if !spymode
+	{
+		spymode = 1
+		audio_play_sound(sfx_mother, 1, false)
+	}
+	else if spymode
+	{
+		spymode = 0
 		audio_play_sound(sfx_door, 1, false)
 	}
 	playerspr()

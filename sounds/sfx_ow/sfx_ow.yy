@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 1,
   "conversionMode": 0,
-  "duration": 1.07102,
+  "duration": 2.065986,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "sfx_ow.mp3",
+  "soundFile": "sfx_ow.wav",
   "type": 0,
   "volume": 1.0,
 }

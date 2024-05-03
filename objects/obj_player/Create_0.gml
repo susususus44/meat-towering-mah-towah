@@ -54,6 +54,7 @@ doublejump = false
 landanim = false
 actortimer = 0
 isnoisy = 0
+spymode = 0
 hallway = 0
 hallwaydir = 0
 jumpstop = 0

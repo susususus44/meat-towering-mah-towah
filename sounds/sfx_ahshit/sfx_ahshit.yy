@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 1,
   "conversionMode": 0,
-  "duration": 1.358367,
+  "duration": 0.983129,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "sfx_ahshit.mp3",
+  "soundFile": "sfx_ahshit.wav",
   "type": 0,
   "volume": 1.0,
 }

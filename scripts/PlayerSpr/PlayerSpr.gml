@@ -80,4 +80,44 @@ function playerspr(){
 		spr_hurt = spr_playerN_hurtjump
 		spr_timesup = spr_player_timesup
 	}
+	if spymode //you stupid son of a gun.
+	{
+    	spr_idle = spr_spy
+		spr_move = spr_spy
+		spr_jump = spr_spy
+		spr_jump2 =spr_spy
+		spr_fall = spr_spy
+		spr_fall2 = spr_spy
+		spr_land = spr_spy
+		spr_land2 = spr_spy
+		spr_punch = spr_spy
+		spr_punchprep = spr_spy
+		spr_uppunch = spr_spy
+		spr_uppunchprep = spr_spy
+		spr_run = spr_spy
+		spr_runjump = spr_spy
+		spr_mach = spr_spy
+		spr_machroll = spr_spy
+		spr_dive = spr_spy
+		spr_slam1 = spr_spy
+		spr_slam2 = spr_spy
+		spr_slam3 = spr_spy
+		spr_crouch = spr_spy
+		spr_crawl = spr_spy
+		spr_crouchjump = spr_spy
+		spr_crouchstart = spr_spy
+		spr_crouchfall = spr_spy
+		spr_lookdoor = spr_playerN_lookdoor
+		spr_walkfront = spr_playerN_walkfront
+		spr_entergate = spr_playerN_entergate
+		spr_machslidestart = spr_playerN_machslide
+		spr_bump = spr_playerN_bump	
+		spr_slamjump1 = spr_playerN_slamjump
+		spr_slamjump2 = spr_playerN_fall
+		spr_throw1 = spr_playerN_noisebombkick
+		spr_throw2 = spr_playerN_noisebombkick
+		spr_hurt = spr_playerN_hurtjump
+		spr_timesup = spr_player_timesup
+	}
 }
+
