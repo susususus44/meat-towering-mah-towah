@@ -1,33 +1,28 @@
 index += 0.35
 with (obj_player)
 {		
+	if (visible) {
+	var _sprite_index = sprite_index
+	if (spymode)
+		_sprite_index = spr_spy
 	pal_swap_set(spr_palette, playerpal, false)
-	if (state == states.comeoutdoor)
-		var doorshade = Approach(1, 0, 0.1)
-	else
-		doorshade = 0
 	if (flash) {
-		if rage
-			draw_sprite_ext(sprite_index, image_index - 1, x, y, xscale, yscale, rot, c_white, 0.3)
 		if (global.shadows)
-			draw_sprite_ext(sprite_index, image_index, x + 5, y + 2, xscale, yscale, rot, c_black, 0.4)
-		draw_sprite_ext(sprite_index, image_index, x, y, xscale, yscale, rot, c_white, alpha)
-		if (sprite_index == spr_player_slam2)
+			draw_sprite_ext(_sprite_index, image_index, x + 5, y + 2, xscale, yscale, rot, c_black, 0.4)
+		draw_sprite_ext(_sprite_index, image_index, x, y, xscale, yscale, rot, c_white, alpha)
+		if (_sprite_index == spr_player_slam2)
 			draw_sprite(spr_slameffect, other.index, x, y)
 	}
 	else {
-		if rage
-			draw_sprite_ext(sprite_index, image_index - 1, x, y, xscale, yscale, rot, c_white, 0.3)
 		if (global.shadows)
-			draw_sprite_ext(sprite_index, image_index, x + 5, y + 2, xscale, yscale, rot, c_black, 0.4 * alpha)
-		draw_sprite_ext(sprite_index, image_index, x, y, xscale, yscale, rot, c_white, alpha)
-		if (sprite_index == spr_player_slam2)
+			draw_sprite_ext(_sprite_index, image_index, x + 5, y + 2, xscale, yscale, rot, c_black, 0.4 * alpha)
+		draw_sprite_ext(_sprite_index, image_index, x, y, xscale, yscale, rot, c_white, alpha)
+		if (_sprite_index == spr_player_slam2)
 			draw_sprite(spr_slameffect, other.index, x, y)
 	}
-	if (state == states.comeoutdoor) {
-		draw_sprite_ext(sprite_index, image_index, x, y, xscale, yscale, rot, c_black, shadowalpha)
-	}
+	draw_sprite_ext(_sprite_index, image_index, x, y, xscale, yscale, rot, c_black, shadowalpha)
 	pal_swap_reset()
+	}
 }
 with (obj_enemy)
 {	

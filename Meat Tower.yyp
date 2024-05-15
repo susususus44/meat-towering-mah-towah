@@ -74,7 +74,7 @@
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.11.1.129",
+    "IDEVersion": "2023.4.0.84",
   },
   "resources": [
     {"id":{"name":"spr_playerN_punchprep","path":"sprites/spr_playerN_punchprep/spr_playerN_punchprep.yy",},},
@@ -97,6 +97,7 @@
     {"id":{"name":"spr_checkpoint_activated","path":"sprites/spr_checkpoint_activated/spr_checkpoint_activated.yy",},},
     {"id":{"name":"scribble_font_get_glyph_ranges","path":"scripts/scribble_font_get_glyph_ranges/scribble_font_get_glyph_ranges.yy",},},
     {"id":{"name":"scr_music","path":"scripts/scr_music/scr_music.yy",},},
+    {"id":{"name":"scr_player_ladder","path":"scripts/scr_player_ladder/scr_player_ladder.yy",},},
     {"id":{"name":"scribble_markdown_set_styles","path":"scripts/scribble_markdown_set_styles/scribble_markdown_set_styles.yy",},},
     {"id":{"name":"spr_slamjumpeffect","path":"sprites/spr_slamjumpeffect/spr_slamjumpeffect.yy",},},
     {"id":{"name":"sfx_enemyhit","path":"sounds/sfx_enemyhit/sfx_enemyhit.yy",},},
@@ -669,7 +670,6 @@
     {"roomId":{"name":"Logo","path":"rooms/Logo/Logo.yy",},},
     {"roomId":{"name":"city_5","path":"rooms/city_5/city_5.yy",},},
   ],
-  "templateType": null,
   "TextureGroups": [
     {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"Default","autocrop":true,"border":2,"compressFormat":"bz2","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"targets":-1,},
   ],

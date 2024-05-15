@@ -3,17 +3,9 @@ if (isnoisy != global.isnoisy)
 	isnoisy = global.isnoisy
 	PlayerSpr()
 }
-if (spymode)
-{
-	PlayerSpr()
-}
 if state != states.noclip
 	scr_collision()
 hitbuffer--
-if (hitbuffer > 0)
-	alpha = wave(0, 1, 0.1, 0)
-else
-	alpha = 1
 if (object_index != obj_player2 && use_controls)
 	scr_getinput()
 else if (use_controls)
@@ -103,57 +95,8 @@ switch (state)
 	case states.bombjump:
 		scr_player_bombjump()
 		break
-	case states.ladder: //i honestly don't want to make another function for such a small state.
-		if !key_up && !key_down && !-key_left && !key_right
-			sprite_index = spr_player_ladder
-		image_speed = 0.5
-		rot = 0
-		vsp = 0
-		hsp = 0
-		if !place_meeting(x, y, obj_ladder)
-		{
-			state = states.normal
-			rot = 0
-		}
-		if key_up
-		{
-			vsp = -5
-			sprite_index = spr_player_laddermove
-			if !audio_is_playing(sfx_walk)
-				scr_soundeffect(sfx_walk)
-		}
-		if key_down
-		{
-			vsp = 6
-			sprite_index = spr_player_ladderdown
-			if place_meeting(x, y + vsp, obj_solid)
-				state = states.normal
-			if !audio_is_playing(sfx_walk)
-				scr_soundeffect(sfx_walk)
-		}
-		if -key_left
-		{
-			hsp = -6
-			rot = 90
-			sprite_index = spr_player_laddermove
-			if !audio_is_playing(sfx_walk)
-				scr_soundeffect(sfx_walk)
-		}
-		if key_right
-		{
-			hsp = 6
-			rot = -90
-			sprite_index = spr_player_laddermove
-			if !audio_is_playing(sfx_walk)
-				scr_soundeffect(sfx_walk)
-		}
-		if key_jump
-		{
-			vsp = -8
-			rot = 0
-			sprite_index = spr_player_jump
-			state = states.jump
-		}
+	case states.ladder: //i honestly don't want to make another function for such a small state. // fuck you mat
+		scr_player_ladder()
 		break
 }
 if state != states.ladder
@@ -196,7 +139,7 @@ if scr_press(vk_f12)
 	
 }
 if flash
-   flash--;
+   alarm[0] = 2
 var overroomy = (y > room_height)
 if ((overroomy || y < -10) && state != states.timesup) {
 	x = obj_revive.x

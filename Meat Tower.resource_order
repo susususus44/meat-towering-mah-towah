@@ -71,6 +71,7 @@
     {"name":"spr_checkpoint_activated","order":70,"path":"sprites/spr_checkpoint_activated/spr_checkpoint_activated.yy",},
     {"name":"scribble_font_get_glyph_ranges","order":10,"path":"scripts/scribble_font_get_glyph_ranges/scribble_font_get_glyph_ranges.yy",},
     {"name":"scr_music","order":10,"path":"scripts/scr_music/scr_music.yy",},
+    {"name":"scr_player_ladder","order":25,"path":"scripts/scr_player_ladder/scr_player_ladder.yy",},
     {"name":"scribble_markdown_set_styles","order":4,"path":"scripts/scribble_markdown_set_styles/scribble_markdown_set_styles.yy",},
     {"name":"spr_slamjumpeffect","order":15,"path":"sprites/spr_slamjumpeffect/spr_slamjumpeffect.yy",},
     {"name":"sfx_enemyhit","order":19,"path":"sounds/sfx_enemyhit/sfx_enemyhit.yy",},

@@ -7,18 +7,6 @@ function scr_player_mach(){
 			sprite_index = spr_run
     }
 	move = (key_left + key_right)
-	if (!audio_is_playing(sfx_mach2) && (sprite_index == spr_player_mach || sprite_index == spr_spy))
-		scr_soundeffect(sfx_mach2)
-	if (!audio_is_playing(sfx_mach1) && sprite_index == spr_player_run) 
-		scr_soundeffect(sfx_mach1)
-	if (!audio_is_playing(sfx_machSKATE2) && sprite_index == spr_playerN_mach)
-		scr_soundeffect(sfx_machSKATE2)
-	if (!audio_is_playing(sfx_machSKATE1) && sprite_index == spr_playerN_run)
-		scr_soundeffect(sfx_machSKATE1)
-	if sprite_index == spr_playerN_run && audio_is_playing(sfx_machSKATE2)
-		audio_stop_sound(sfx_machSKATE2)
-	if sprite_index == spr_playerN_mach && audio_is_playing(sfx_machSKATE1)
-		audio_stop_sound(sfx_machSKATE1)
 	if (slamafterimage > 0)
 		slamafterimage--
 	else if (movespeed >= 8)
