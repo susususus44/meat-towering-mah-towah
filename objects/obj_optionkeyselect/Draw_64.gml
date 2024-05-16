@@ -1,5 +1,7 @@
+draw_set_alpha(1)
 draw_set_font(global.bigfont)
 draw_sprite_tiled(bg_placeholder, -1, draw, draw)
+draw_set_alpha(0.7)
 draw_sprite_tiled(spr_hud, -1, -draw, -draw)
 draw_set_alpha(1)
 for (var i = 0; i < array_length(keys); ++i) {

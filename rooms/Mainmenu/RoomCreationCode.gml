@@ -1,1 +1,1 @@
-global.bigfont = font_add_sprite_ext(spr_bigfont, "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789:", 0.3, -2)
+global.bigfont = font_add_sprite_ext(spr_bigfont, "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789:", 0.3, -3)

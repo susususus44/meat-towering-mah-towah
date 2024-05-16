@@ -1,4 +1,3 @@
-scr_writeinputglobals()
 ini_open("options.ini")
 global.vol = ini_read_real("options", "volume", 1);
 global.musicvol = ini_read_real("options", "musicvolume", 1);
