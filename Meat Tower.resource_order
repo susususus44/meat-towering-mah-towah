@@ -210,6 +210,7 @@
     {"name":"spr_knife","order":40,"path":"sprites/spr_knife/spr_knife.yy",},
     {"name":"sfx_slamstart","order":9,"path":"sounds/sfx_slamstart/sfx_slamstart.yy",},
     {"name":"spr_unknownuser","order":31,"path":"sprites/spr_unknownuser/spr_unknownuser.yy",},
+    {"name":"obj_keyset","order":32,"path":"objects/obj_keyset/obj_keyset.yy",},
     {"name":"mu_escape","order":15,"path":"sounds/mu_escape/mu_escape.yy",},
     {"name":"scr_soundeffect","order":14,"path":"scripts/scr_soundeffect/scr_soundeffect.yy",},
     {"name":"scribble_anim_shake","order":6,"path":"scripts/scribble_anim_shake/scribble_anim_shake.yy",},

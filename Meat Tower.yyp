@@ -247,6 +247,7 @@
     {"id":{"name":"spr_knife","path":"sprites/spr_knife/spr_knife.yy",},},
     {"id":{"name":"sfx_slamstart","path":"sounds/sfx_slamstart/sfx_slamstart.yy",},},
     {"id":{"name":"spr_unknownuser","path":"sprites/spr_unknownuser/spr_unknownuser.yy",},},
+    {"id":{"name":"obj_keyset","path":"objects/obj_keyset/obj_keyset.yy",},},
     {"id":{"name":"mu_escape","path":"sounds/mu_escape/mu_escape.yy",},},
     {"id":{"name":"scr_soundeffect","path":"scripts/scr_soundeffect/scr_soundeffect.yy",},},
     {"id":{"name":"scribble_anim_shake","path":"scripts/scribble_anim_shake/scribble_anim_shake.yy",},},

@@ -9,6 +9,7 @@ function scr_hurtplayer(argument0){
 		state = states.hurt
 		vsp = -10
 		healthpoints--;
+		doublejump = false
 		xscale *= -1
 		movespeed = (other.object_index != obj_rollingpig ? 8 : 16)
 		hsp = (other.object_index != obj_rollingpig ? 5 : 16)

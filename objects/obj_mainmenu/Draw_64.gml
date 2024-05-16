@@ -28,7 +28,7 @@ for (var i = 0; i < array_length(menu); i++)
 		draw_set_halign(fa_left)
 		draw_sprite(spr_mainmenuselectfile, fileselected, menugui1 - 437, (270 + (i * 80)) - 80)
 	}
-	draw_text_scribble(menugui1 - (i == 0 ? 270 : 0), (370 + (i * 80)) - 110, str)
+	draw_text_scribble(menugui1 - (i == 0 ? 300 : 0), (370 + (i * 80)) - 110, str)
 }
 draw_set_colour(c_white)
 draw_set_alpha(textfade)

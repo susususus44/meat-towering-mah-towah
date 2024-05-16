@@ -28,7 +28,7 @@ function scr_saveinput() {
 	}
 	//gamepad
 	var keybinds = ["key_left_gamepad", "key_right_gamepad", "key_up_gamepad", "key_down_gamepad", "key_jump_gamepad", "key_attack_gamepad", "key_run_gamepad", "key_knife_gamepad"]
-	var keybindsdefault = [global.key_leftG, global.key_rightG, global.key_upG, global.key_downG, global.key_jumpG, global.key_attaGkG, global.key_runG, global.key_knifeG]
+	var keybindsdefault = [global.key_leftG, global.key_rightG, global.key_upG, global.key_downG, global.key_jumpG, global.key_attackG, global.key_runG, global.key_knifeG]
 	for (var i = 0; i < array_length(keybinds); ++i)
 	{
 		ini_write_string("controls", keybinds[i], keybindsdefault[i])
@@ -128,4 +128,20 @@ function scr_getinput2(){
 	key_attack2 = scr_press(ord("K"))
 	key_knife = scr_holding(ord("P"))
 	key_knife2 = scr_press(ord("P"))
+}
+
+function scr_updateoptionskeys() {
+	with (obj_optionkeyselect)
+	{
+backbuffer = 3
+keys = []
+array_push(keys, ["UP", global.key_upC])
+array_push(keys, ["DOWN", global.key_downC])
+array_push(keys, ["LEFT", global.key_leftC])
+array_push(keys, ["RIGHT", (global.key_rightC)])
+array_push(keys, ["JUMP", (global.key_jumpC)])
+array_push(keys, ["ATTACK", (global.key_attackC)])
+array_push(keys, ["SECONDARY ATTACK", (global.key_knifeC)])
+array_push(keys, ["EXIT", ("PRESS JUMP")])
+	}
 }

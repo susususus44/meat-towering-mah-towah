@@ -33,4 +33,5 @@ with (obj_revive)
     y = other.y
 }
 exitlevel = 0
+hallway = false
 // again thank you vadimo for the code

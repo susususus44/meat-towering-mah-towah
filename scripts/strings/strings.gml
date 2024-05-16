@@ -1,5 +1,6 @@
 function translate_keycode(key) {
     var ret;
+	if (key != "PRESS JUMP")
     switch (key) {
         case 8:
             ret = "BACKSPACE";
@@ -206,6 +207,8 @@ function translate_keycode(key) {
             ret = "UNKNOWN";
 			break;
 	}
+	else
+		return key;
 	return ret;
 }
 

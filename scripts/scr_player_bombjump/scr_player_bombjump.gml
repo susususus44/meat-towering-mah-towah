@@ -36,5 +36,15 @@ function scr_player_bombjump(){
 		}
 		hsp = clamp(hsp, -16, 16)
 		hsp += move * 0.1
+		if (move != 0)
+			xscale = sign(move)
+		if (key_attack2 && key_up)
+		{
+			doublejump = false
+			state = states.bombjump
+			sprite_index = spr_throw2
+			image_speed = 0.35
+			image_index = 5
+		}
 	}
 }

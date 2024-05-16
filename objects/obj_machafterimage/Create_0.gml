@@ -7,3 +7,4 @@ image_index = ID.image_index
 image_speed = 0
 alpha = 1
 depth = -125
+alarm[0] = 5

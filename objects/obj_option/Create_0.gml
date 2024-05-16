@@ -7,13 +7,14 @@ if (room != Mainmenu)
 array_push(menu, arr)
 array_push(menu, ["WINDOW MODE", "VSYNC"])
 array_push(menu, ["MASTER VOLUME", "MUSIC VOLUME", "SFX VOLUME"])
-array_push(menu, ["NOT DONE YET"])
+array_push(menu, ["CHANGE CONTROLS"])
 menuselect = []
 array_push(menuselect, [(global.bloodenabled == 1 ? "ON" : "OFF"), (global.mcpigbrother == 1 ? "ON" : "OFF"), (global.intro == 1 ? "ON" : "OFF"), (global.shadows == 1 ? "ON" : "OFF"), (global.isnoisy == 1 ? spr_liveiconnoise : spr_liveicon)])
 array_push(menuselect, [(global.fullscreen == 1 ? "FULLSCREEN" : (global.fullscreen == 2 ? "BORDERLESS WINDOW" : "WINDOWED"))])
 array_push(menuselect, [floor(global.vol * 100), floor(global.musicvol * 100), floor(global.audiovol * 100)])
 array_push(menuselect, [""])
 scr_soundeffect(sfx_menuwoosh)
+backbuffer = 0
 sections = ["GAME", "VIDEO OPTIONS", "AUDIO OPTIONS", "CONTROLS"]
 sectionselect = 0
 selected = 0

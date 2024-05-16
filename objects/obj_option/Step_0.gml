@@ -3,6 +3,7 @@ menuselect = []
 array_push(menuselect, [(global.bloodenabled == 1 ? "ON" : "OFF"), (global.mcpigbrother == 1 ? "ON" : "OFF"), (global.intro == 1 ? "ON" : "OFF"), (global.shadows == 1 ? "ON" : "OFF"), (global.isnoisy == 1 ? spr_liveiconnoise : spr_liveicon)])
 array_push(menuselect, [(global.fullscreen == 1 ? "FULLSCREEN" : (global.fullscreen == 2 ? "BORDERLESS WINDOW" : "WINDOWED")), (global.vsync ? "ON" : "OFF"), string_concat(global.windowscale, "X")])
 array_push(menuselect, [floor(global.vol * 100), floor(global.musicvol * 100), floor(global.audiovol * 100)])
+array_push(menuselect, ["PRESS JUMP"])
 bgy += 0.9
 bgx += 0.9
 index += 0.35
@@ -33,8 +34,8 @@ else
 menugui1 = Approach(menugui1, 100 - plus, 18)
 if key_jump2
 	scr_soundeffect(sfx_punch1)
-	
-if (key_attack)
+backbuffer--
+if (key_attack && backbuffer < 0)
 {
 	instance_destroy()
 }
@@ -181,7 +182,7 @@ if (menu[sectionselect][selected] == "STARTING INTRO" && key_jump2)
 	}
 }
 if (menu[sectionselect][selected] == "CHANGE CONTROLS" && key_jump2 && !instance_exists(obj_optionkeyselect)) {
-	
+	instance_create(x, y, obj_optionkeyselect, -250)
 }
 if (menu[sectionselect][selected] == "SHADOWS" && key_jump2)
 {
