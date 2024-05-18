@@ -1,7 +1,11 @@
 scr_getinput()
+fade = approach(fade, 1, 0.1)
+offsetx = lerp(offsetx, 0, 0.1)
+drawsp = approach(drawsp, 1, 0.01)
+draw += drawsp
 if (!instance_exists(obj_keyset)) {
+if (fade == 1) {
 move = -key_up2 + key_down2
-draw++
 backbuffer--
 if (backbuffer < 1)
 key_selected += move
@@ -62,5 +66,6 @@ if (key_attack)
 	instance_destroy()
 	with (obj_option)
 		backbuffer = 3
+}
 }
 }

@@ -2,6 +2,8 @@ scr_initinput()
 menu = ["FILE", "OPTIONS", "EXIT GAME"]
 selected = 0
 menugui = 0
+move = 0
+move1 = 0
 menugui1 = 1200
 opened = 1
 fade = 1

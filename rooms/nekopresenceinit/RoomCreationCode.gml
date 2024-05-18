@@ -1,4 +1,5 @@
 ini_open("options.ini")
+global.richpresence = ini_read_real("options", "richpresence", 1)
 global.vol = ini_read_real("options", "volume", 1);
 global.musicvol = ini_read_real("options", "musicvolume", 1);
 global.audiovol = ini_read_real("options", "soundvolume", 1);
@@ -17,7 +18,7 @@ audio_master_gain(global.vol);
 ini_close()
 scr_initinputglobals()
 global.panic = false
-global.debug = true
+global.debug = false
 global.amountoftoppins = 0
 global.file = 0
 global.follower_queue = ds_queue_create();

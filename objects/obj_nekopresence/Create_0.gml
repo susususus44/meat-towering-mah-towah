@@ -1,11 +1,15 @@
 /// @description Initialize Discord.
+ini_open("options.ini")
+global.richpresence = ini_read_real("options", "richpresence", 1)
+ini_close()
+if (!global.richpresence)
+	instance_destroy()
 window_set_cursor(cr_hourglass);
 #macro DISCORD_APP_ID "1210171602080104508"
 ready = false;
 userid = 0
 index = 0
 drawgui = true
-global.roomname = "NekoPresence init"
 alarm[0] = room_speed * 5;
 image_speed = 0.35
 depth = -200

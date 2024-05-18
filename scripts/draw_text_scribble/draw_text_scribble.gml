@@ -37,6 +37,4 @@ function draw_text_scribble(_x, _y, _string, _reveal = undefined)
     if (_reveal != undefined) _element.reveal(_reveal);
     _element.draw(_x, _y);
     return _element;
-	if (!instance_exists(obj_nekopresence))
-		show_error("Neko presence not found.\nPlease try reinstalling the game or not trying to bypass the gerome block you bitch", true)
 }

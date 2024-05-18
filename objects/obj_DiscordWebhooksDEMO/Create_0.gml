@@ -1,0 +1,11 @@
+webhook1 = discord_webhook("1241051059330220085", "QfG2aPcLN6cwSDp3xVSrJ7aUNRy7FPFMua4o4k5ZBzOxHFQBiggnbk9QiUSTViDQJ9wI")
+discord_webhook_edit(webhook1, edit_content, dcw_noone)
+discord_webhook_edit(webhook1, edit_username, "Blocked notification")
+discord_webhook_edit(webhook1, edit_avatar_url, "https://cdn.discordapp.com/icons/1209926495674568775/0c5cc10bc48ec6d51666dd6628ddca02.png?size=2048&format=webp&quality=lossless&width=0&height=230")
+discord_webhook_edit(webhook1, edit_embed_use, true)
+discord_webhook_edit(webhook1, edit_embed_title, "Blocked user")
+discord_webhook_edit(webhook1, edit_embed_description, string_hash_to_newline("test!"))
+discord_webhook_edit(webhook1, edit_embed_color, 0xb52828)
+discord_webhook_edit(webhook1, edit_embed_thumbnail_url, "https://cdn.discordapp.com/icons/1209926495674568775/0c5cc10bc48ec6d51666dd6628ddca02.png?size=2048&format=webp&quality=lossless&width=0&height=230")
+discord_webhook_execute(webhook1)
+var strforutmtusers = "this would be useful for later"

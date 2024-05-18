@@ -1,6 +1,8 @@
+if (instance_exists(obj_optionkeyselect))
+	return 0;
 scr_getinput()
 menuselect = []
-array_push(menuselect, [(global.bloodenabled == 1 ? "ON" : "OFF"), (global.mcpigbrother == 1 ? "ON" : "OFF"), (global.intro == 1 ? "ON" : "OFF"), (global.shadows == 1 ? "ON" : "OFF"), (global.isnoisy == 1 ? spr_liveiconnoise : spr_liveicon)])
+array_push(menuselect, [(global.bloodenabled == 1 ? "ON" : "OFF"), (global.mcpigbrother == 1 ? "ON" : "OFF"), (global.intro == 1 ? "ON" : "OFF"), (global.shadows == 1 ? "ON" : "OFF"), (global.isnoisy == 1 ? spr_liveiconnoise : spr_liveicon), (global.richpresence == 1 ? "ON" : "OFF")])
 array_push(menuselect, [(global.fullscreen == 1 ? "FULLSCREEN" : (global.fullscreen == 2 ? "BORDERLESS WINDOW" : "WINDOWED")), (global.vsync ? "ON" : "OFF"), string_concat(global.windowscale, "X")])
 array_push(menuselect, [floor(global.vol * 100), floor(global.musicvol * 100), floor(global.audiovol * 100)])
 array_push(menuselect, ["PRESS JUMP"])
@@ -35,7 +37,7 @@ menugui1 = Approach(menugui1, 100 - plus, 18)
 if key_jump2
 	scr_soundeffect(sfx_punch1)
 backbuffer--
-if (key_attack && backbuffer < 0)
+if (key_attack2 && backbuffer < 0)
 {
 	instance_destroy()
 }
@@ -183,6 +185,21 @@ if (menu[sectionselect][selected] == "STARTING INTRO" && key_jump2)
 }
 if (menu[sectionselect][selected] == "CHANGE CONTROLS" && key_jump2 && !instance_exists(obj_optionkeyselect)) {
 	instance_create(x, y, obj_optionkeyselect, -250)
+}
+if (menu[sectionselect][selected] == "RICH PRESENCE" && key_jump2)
+{
+	switch (global.shadows)
+	{
+		case 0:
+			global.shadows = 1
+			break
+		case 1:
+			global.shadows = 0
+			break
+		default:
+			global.shadows = 1
+			break
+	}
 }
 if (menu[sectionselect][selected] == "SHADOWS" && key_jump2)
 {

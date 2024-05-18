@@ -4,6 +4,7 @@ draw_set_valign(fa_bottom)
 draw_set_color(c_white)
 draw_set_alpha((fade / 2))
 draw_sprite_tiled(spr_mainmenubg, 0, bgx, bgy)
+draw_sprite_tiled(spr_artyomheads, 0, -bgx, -bgy)
 draw_set_alpha(fade)
 if instance_exists(obj_option)
 	return 0;

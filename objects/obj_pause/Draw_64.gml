@@ -13,6 +13,7 @@ draw_set_halign(fa_center)
 draw_set_valign(fa_bottom)
 draw_set_alpha((fade / 2))
 draw_rectangle_color(0, 0, view_wport[0], view_hport[0], c_black, c_black, c_black, c_black, false)
+draw_sprite_tiled(spr_artyomheads, 0, bgx, bgy)
 draw_set_alpha(1)
 if (instance_exists(obj_option))
 	return 0;

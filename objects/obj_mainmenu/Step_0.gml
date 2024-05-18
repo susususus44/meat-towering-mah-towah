@@ -1,6 +1,6 @@
 scr_getinput()
-bgy += wave(-1, 1, 30, 0)
-bgx += wave(-1, 1, 10, 0)
+bgy += 1
+bgx += 1
 move = ((-key_up2) + key_down2)
 if (scr_menunotexist() && !instance_exists(obj_fadeout)) {
     if inmenu
