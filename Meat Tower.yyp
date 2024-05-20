@@ -76,7 +76,7 @@
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.4.0.84",
+    "IDEVersion": "2023.11.1.129",
   },
   "resources": [
     {"id":{"name":"spr_playerN_punchprep","path":"sprites/spr_playerN_punchprep/spr_playerN_punchprep.yy",},},
@@ -685,6 +685,7 @@
     {"roomId":{"name":"Logo","path":"rooms/Logo/Logo.yy",},},
     {"roomId":{"name":"city_5","path":"rooms/city_5/city_5.yy",},},
   ],
+  "templateType": null,
   "TextureGroups": [
     {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"Default","autocrop":true,"border":2,"compressFormat":"bz2","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"targets":-1,},
   ],
