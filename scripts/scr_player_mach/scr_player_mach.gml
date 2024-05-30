@@ -82,7 +82,7 @@ function scr_player_mach(){
 		if !isnoisy
 		{
 			state = states.cling
-			vsp = 0
+			target_vsp = vsp
 			hsp = 0
 			movespeed = 0
 			sprite_index = spr_player_cling
@@ -123,10 +123,10 @@ function scr_player_mach(){
 			sprite_index = spr_playerN_divebombfall
 		}
 	}
-	if (move == xscale && movespeed < 10)
-		movespeed += 0.08
-	else if (movespeed >= 5)
-		movespeed -= 0.1
+	if (movespeed < 14)
+	{
+		movespeed += 0.1
+	}
 	grav = 0.3
 	hsp = (movespeed * xscale)
 	checkplayercrusher()

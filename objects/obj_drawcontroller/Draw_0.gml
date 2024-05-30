@@ -2,9 +2,10 @@ index += 0.35
 with (obj_player)
 {		
 	if (visible) {
-	var _sprite_index = sprite_index
+	var _sprite_index = spr_player_idle
 	if (spymode)
 		_sprite_index = spr_spy
+	
 	pal_swap_set(spr_palette, playerpal, false)
 	if (flash) {
 		if (global.shadows)

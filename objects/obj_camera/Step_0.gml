@@ -39,6 +39,7 @@ if (mouse_wheel_up || mouse_wheel_down)
 if (!obj_player.coop)
 {
 	var target = obj_player1
+	zoom = lerp(zoom, 0.75 + ((target.hsp / 20) * target.xscale), 0.01)
 	view_enabled = true;
 	view_visible[0] = true;
 	view_xport[0] = 0 + irandom_range(-shake_mag, shake_mag)
@@ -49,8 +50,6 @@ if (!obj_player.coop)
 	var hport = view_hport / 2
 	var camx = (target.x - wport) + offsetx + 480 * abs(zoom - 1)
 	var camy = (target.y - hport) + offsety - 50 + 270 * abs(zoom - 1)
-	camx = clamp(camx, 0, room_width - view_wport)
-	camy = clamp(camy, 0, room_height - view_hport)
 	camxsmooth = lerp(camxsmooth, camx, 0.02)
 	camysmooth = lerp(camysmooth, camy, 0.02)
 	if !smoothcam
@@ -66,7 +65,7 @@ if (!obj_player.coop)
 	else
 		angle = lerp(angle, 0, 0.1)
 	if (target.state == states.mach && target.movespeed >= 8)
-		offsetx = Approach(offsetx, 60 * target.xscale, 4)
+		offsetx = Approach(offsetx, target.movespeed * target.xscale, 4)
 	else
 		offsetx = Approach(offsetx, 0, 6)
 	camera_set_view_angle(view_camera[0], angle)

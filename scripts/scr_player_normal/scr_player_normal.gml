@@ -3,19 +3,8 @@ function scr_player_normal(){
 	move = (key_left + key_right)
 	hsp = (movespeed * xscale)
 	rage = 0
-	if (distance_to_object(obj_boombox) < 200) {
-		var idlespr = spr_player_breakdancin
-		var movespr = spr_player_breakdancin
-		image_speed = 0.7
-	}
-	else
-	{
-		var idlespr = spr_idle
-		var movespr = spr_move
-		image_speed = 0.35
-		if (sprite_index == movespr)
-			image_speed = 0.5
-	}
+	var idlespr = spr_idle
+	var movespr = spr_move
 	if (instance_exists(obj_runeffect))
 		obj_runeffect.image_xscale = xscale
 	if (landanim) {
@@ -65,14 +54,6 @@ function scr_player_normal(){
 			sprite_index = idlespr
 		movespeed = 0
 	}
-	if (key_run && !(place_meeting((x + xscale), y, obj_solid)))
-	{
-		movespeed = 6
-		state = states.mach
-		sprite_index = spr_run
-		image_index = 0
-		image_speed = 0.35
-	}
 	if (key_jump2)
 	{	
 		state = states.jump
@@ -82,9 +63,9 @@ function scr_player_normal(){
 		movespeed = 4
 		momentum = 0
 		grav = 0.2
+		movespeed *= xscale
 		jumpstop = 0
 		image_index = 0
-		sprite_index = (key_run == 1 ? spr_runjump : spr_jump)
 	}
 	if (!grounded)
 	{

@@ -1,10 +1,17 @@
 function scr_player_cling(){
-	vsp = 0
+	target_vsp = Approach(target_vsp, 0, 0.1)
+	vsp = target_vsp
 	movespeed = 0
 	if key_jump2 && sprite_index != spr_player_clingjump
 	{
 		image_index = 0
 		sprite_index = spr_player_clingjump
+	}
+	if key_down || !place_meeting(x + xscale, y, obj_solid) && state != states.mach
+	{
+		state = states.jump
+		sprite_index = spr_player_fall2
+		image_index = 0
 	}
 	if floor(image_index) == image_number - 1 && sprite_index == spr_player_clingjump
 	{
@@ -13,13 +20,6 @@ function scr_player_cling(){
 		xscale *= -1
 		movespeed = 6
 		sprite_index = spr_player_runjump
-	}
-	if key_down
-	{
-		state = states.jump
-		vsp = 0
-		sprite_index = spr_player_fall2
-		image_index = 0
 	}
 	hsp = (movespeed * xscale)
 }

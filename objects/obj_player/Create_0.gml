@@ -49,6 +49,7 @@ global.bigfont = font_add_sprite_ext(spr_bigfont, "ABCDEFGHIJKLMNOPQRSTUVWXYZ123
 global.titlecardfont = font_add_sprite_ext(spr_titlecardfont, "ABCDEFGHIJKLMNOPQRSTUVWXYZ", 1, 0)
 global.collectfont = font_add_sprite_ext(spr_collectfont, "1234567890", 0, -5)
 lives = 3
+target_vsp = 0
 healthpoints = 5
 doublejump = false
 landanim = false

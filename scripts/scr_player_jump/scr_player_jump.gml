@@ -1,7 +1,7 @@
 function scr_player_jump(){
 	doublejump = false
 	if (!momentum)
-        hsp = (move * movespeed)
+        hsp = movespeed
     else
         hsp = (xscale * movespeed)
 	move = (key_left + key_right)
@@ -44,7 +44,12 @@ function scr_player_jump(){
 	}
 	}
 	if (move != 0 && !momentum)
-		xscale = move
+	{
+		if (movespeed > -4 && move == -1)
+			movespeed -= 0.5
+		if (movespeed < 4 && move == 1)
+			movespeed += 0.5
+	}
 	if !key_jump && vsp < 0 && !momentum && sprite_index != spr_fall2 && !jumpstop
 	{
 		vsp /= 20
